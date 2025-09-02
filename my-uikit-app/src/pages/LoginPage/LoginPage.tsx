@@ -1,9 +1,9 @@
 import React, {useCallback, useState} from 'react';
 import Button from 'react-bootstrap/Button';
-interface ILoginPageProps {
-    login: string,
-    password: string,
-}
+// interface ILoginPageProps {
+//     login: string,
+//     password: string,
+// }
 export const LoginPage = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
