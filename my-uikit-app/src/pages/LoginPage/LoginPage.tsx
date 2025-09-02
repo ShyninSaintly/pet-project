@@ -1,5 +1,5 @@
 import React, {useCallback, useState} from 'react';
-import {Button} from "uikit-react";
+import Button from 'react-bootstrap/Button';
 interface ILoginPageProps {
     login: string,
     password: string,
@@ -8,10 +8,10 @@ export const LoginPage = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
-    const [formData, setFormData] = useState<ILoginPageProps>({
-        login: "",
-        password: '',
-    });
+    // const [formData, setFormData] = useState<ILoginPageProps>({
+    //     login: "",
+    //     password: '',
+    // });
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log('Email:', login, 'Password:', password);
