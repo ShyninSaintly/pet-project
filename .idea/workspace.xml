@@ -5,77 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Added some uikits and Table Base">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-uikit-app/prettier.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.bin/prettier" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.bin/prettier.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.bin/prettier.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/THIRD-PARTY-NOTICES.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/bin/prettier.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/doc.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/doc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/doc.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/index.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/index.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/internal/experimental-cli-worker.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/internal/experimental-cli.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/internal/legacy-cli.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/acorn.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/acorn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/acorn.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/angular.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/angular.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/angular.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/babel.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/babel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/babel.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/estree.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/estree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/estree.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/flow.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/flow.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/glimmer.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/glimmer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/glimmer.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/graphql.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/graphql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/graphql.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/html.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/html.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/html.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/markdown.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/markdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/markdown.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/meriyah.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/meriyah.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/meriyah.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/postcss.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/postcss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/postcss.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/typescript.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/typescript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/typescript.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/yaml.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/yaml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/plugins/yaml.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/standalone.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/standalone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/prettier/standalone.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +89,7 @@
       <workItem from="1756721460604" duration="406000" />
       <workItem from="1756796148756" duration="8274000" />
       <workItem from="1756810323070" duration="2406000" />
-      <workItem from="1756812771751" duration="2470000" />
+      <workItem from="1756812771751" duration="5297000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -166,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756721757934</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added some uikits and Table Base">
+      <option name="closed" value="true" />
+      <created>1756815879261</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756815879261</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
