@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Added use Droppable">
+      <change afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Droppable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Droppable.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +52,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\pet-proj\my-uikit-app\src\shared\ui\dragAndDrop\Draggable" />
       <recent name="C:\projects\pet-proj\my-uikit-app\src\pages\LoginPage" />
     </key>
   </component>
@@ -88,7 +94,8 @@
       <workItem from="1756721460604" duration="406000" />
       <workItem from="1756796148756" duration="8274000" />
       <workItem from="1756810323070" duration="2406000" />
-      <workItem from="1756812771751" duration="7830000" />
+      <workItem from="1756812771751" duration="8179000" />
+      <workItem from="1756876085296" duration="19772000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -114,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756818839255</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added use Droppable">
+      <option name="closed" value="true" />
+      <created>1756821626221</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756821626221</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
