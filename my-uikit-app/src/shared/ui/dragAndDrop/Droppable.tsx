@@ -12,7 +12,6 @@ export const Droppable = (props: { id: string; children: React.ReactNode }) => {
         backgroundColor:'6C6C6CFF',
 
     };
-
     return (
         <div ref={setNodeRef} style={style}>
             {props.children}

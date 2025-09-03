@@ -1,19 +1,20 @@
 import {Nav} from "react-bootstrap";
-
+import classes from './NavLinks.module.scss'
 export const NavLinks = () => {
     return (
         <Nav
+            className={classes.NavLinks}
             activeKey="/home"
             onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
         >
             <Nav.Item>
-                <Nav.Link href="/home">Active</Nav.Link>
+                <Nav.Link href="/home">Главная</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Link</Nav.Link>
+                <Nav.Link href="/dashboard">Доска</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-2">Link</Nav.Link>
+                <Nav.Link href="/user">Профиль</Nav.Link>
             </Nav.Item>
         </Nav>
     );
