@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="DnD table Made">
+    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Json Server and DnD table added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Droppable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Droppable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +91,7 @@
       <workItem from="1756810323070" duration="2406000" />
       <workItem from="1756812771751" duration="8179000" />
       <workItem from="1756876085296" duration="25013000" />
-      <workItem from="1756962802716" duration="11694000" />
+      <workItem from="1756962802716" duration="15398000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -146,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756903589736</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Json Server and DnD table added">
+      <option name="closed" value="true" />
+      <created>1756981598387</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756981598387</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +171,7 @@
     <MESSAGE value="Added some uikits and Table Base" />
     <MESSAGE value="Added use Droppable" />
     <MESSAGE value="DnD table Made" />
-    <option name="LAST_COMMIT_MESSAGE" value="DnD table Made" />
+    <MESSAGE value="Json Server and DnD table added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Json Server and DnD table added" />
   </component>
 </project>

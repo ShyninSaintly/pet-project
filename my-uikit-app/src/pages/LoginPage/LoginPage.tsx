@@ -1,5 +1,7 @@
 import React, {useCallback, useState} from 'react';
+import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
+import {useNavigate} from "react-router-dom";
 // interface ILoginPageProps {
 //     login: string,
 //     password: string,
@@ -8,10 +10,28 @@ export const LoginPage = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
+    const navigate = useNavigate();
     // const [formData, setFormData] = useState<ILoginPageProps>({
     //     login: "",
     //     password: '',
     // });
+    const getUserInfo = () => {
+        fetch('http://localhost:3000/users')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if(data.password ===password && data.userName === login){
+navigate('/');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log('Email:', login, 'Password:', password);
@@ -20,45 +40,22 @@ export const LoginPage = () => {
         setRememberMe(e.currentTarget.checked);
     }, []);
     return (
-            <div className="uk-height-medium uk-flex uk-flex-center uk-flex-middle">
-                    <div className="uk-card uk-card-default uk-card-body uk-box-shadow-large">
-                        <h2 className="uk-text-center uk-heading-divider">Авторизация</h2>
-                            <form onSubmit={handleSubmit}>
-                                <div className="uk-margin">
-                                    <input
-                                        className="uk-input"
-                                        type="login"
-                                        placeholder="Логин"
-                                        value={login}
-                                        required
-                                        onChange={(e) => setLogin(e.target.value)}
-                                    />
-                                </div>
+        <Form onSubmit={(e)=>e.preventDefault()}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="login" placeholder="Логин" onChange={(e) => setLogin(e.target.value)} />
+            </Form.Group>
 
-                                <div className="uk-margin">
-                                    <input
-                                        className="uk-input"
-                                        type="password"
-                                        placeholder="Пароль"
-                                        value={password}
-                                        required
-                                        onChange={(e) => setPassword(e.target.value)}
-                                    />
-                                </div>
-                                <div className="uk-margin">
-                                    <label>
-                                        <input className="uk-radio" type="radio" name="radio1" checked={rememberMe} onChange={handleRememberMe}/> Запомнить меня?
-                                    </label>
-                                </div>
-                                    <Button
-                                    className="uk-button uk-button-primary uk-width-1-1"
-                                    type="submit"
-                                    onClick={handleSubmit}
-                                    >
-                                        Войти
-                                    </Button>
-                            </form>
-                    </div>
-            </div>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Пароль" onChange={(e) => setPassword(e.target.value)}/>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Запомнить меня?" onChange={handleRememberMe} />
+            </Form.Group>
+            <Button variant="primary" type="submit" onClick={getUserInfo}>
+                Submit
+            </Button>
+        </Form>
     );
 };

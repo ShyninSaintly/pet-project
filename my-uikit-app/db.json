@@ -9,5 +9,15 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "users": [
+    {
+      "userName": "Admin",
+      "password": "test"
+    },
+    {
+      "userName": "User",
+      "password": "test"
+    }
+  ]
 }
