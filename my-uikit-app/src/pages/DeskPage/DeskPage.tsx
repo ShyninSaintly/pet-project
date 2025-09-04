@@ -17,8 +17,8 @@ export const DeskPage = () => {
     const [items, setItems] = useState<Record<ColumnId, Task[]>>({
         todo: [{ id: '1', content: 'Задача 1' }],
         inProgress: [{ id: '2', content: 'Задача 2' }],
-        testing: [],
-        done: []
+        testing: [{ id: '3', content: 'Задача 3' }],
+        done: [{ id: '4', content: 'Задача 4' }]
     });
 
     const handleDragEnd = (event: any) => {
@@ -49,39 +49,39 @@ export const DeskPage = () => {
     return (
         <>
             <NavLinks />
-            <Container fluid>
-                <DndContext onDragEnd={handleDragEnd}>
-                    <Table responsive="xl" className={classes.DeskPageTable}>
-                        <thead>
-                        <tr>
-                            <th>Надо сделать</th>
-                            <th>В работе</th>
-                            <th>Готов к тесту</th>
-                            <th>Готово</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            {(['todo', 'inProgress', 'testing', 'done'] as ColumnId[]).map(columnId => (
-                                <td key={columnId}>
-                                    <Droppable id={columnId}>
-                                        {items[columnId].length > 0 ? (
-                                            items[columnId].map(task => (
-                                                <Draggable key={task.id} id={task.id}>
-                                                    {task.content}
-                                                </Draggable>
-                                            ))
-                                        ) : (
-                                            'Перетащите задачу в это поле'
-                                        )}
-                                    </Droppable>
-                                </td>
-                            ))}
-                        </tr>
-                        </tbody>
-                    </Table>
-                </DndContext>
-            </Container>
+                <Container fluid>
+                    <DndContext onDragEnd={handleDragEnd}>
+                        <Table responsive="xl" className={classes.DeskPageTable}>
+                            <thead>
+                                <tr>
+                                    <th>Надо сделать</th>
+                                    <th>В работе</th>
+                                    <th>Готов к тесту</th>
+                                    <th>Готово</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    {(['todo', 'inProgress', 'testing', 'done'] as ColumnId[]).map(columnId => (
+                                        <td key={columnId}>
+                                            <Droppable id={columnId}>
+                                                {items[columnId].length > 0 ? (
+                                                    items[columnId].map(task => (
+                                                        <Draggable key={task.id} id={task.id}>
+                                                            {task.content}
+                                                        </Draggable>
+                                                    ))
+                                                ) : (
+                                                    'Перетащите задачу в это поле'
+                                                )}
+                                            </Droppable>
+                                        </td>
+                                    ))}
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </DndContext>
+                </Container>
         </>
     );
 };

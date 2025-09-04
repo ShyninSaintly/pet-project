@@ -3,7 +3,7 @@ import classes from './NavLinks.module.scss'
 export const NavLinks = () => {
     return (
         <Nav
-            className={classes.NavLinks}
+            className={classes.Nav}
             activeKey="/home"
             onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
         >

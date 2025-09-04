@@ -6,7 +6,7 @@ export const Droppable = (props: { id: string; children: React.ReactNode }) => {
         id: props.id,
     });
     const style = {
-        opacity: isOver ? 1 : 0.5,
+        border: isOver ? 1 : 0.5,
         width:'100%',
         height:'100vh',
         backgroundColor:'6C6C6CFF',

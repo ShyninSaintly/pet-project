@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="DnD table Made">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Droppable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Droppable.tsx" afterDir="false" />
@@ -92,7 +95,8 @@
       <workItem from="1756796148756" duration="8274000" />
       <workItem from="1756810323070" duration="2406000" />
       <workItem from="1756812771751" duration="8179000" />
-      <workItem from="1756876085296" duration="20734000" />
+      <workItem from="1756876085296" duration="25013000" />
+      <workItem from="1756962802716" duration="11694000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -134,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756902567720</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="DnD table Made">
+      <option name="closed" value="true" />
+      <created>1756903589736</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756903589736</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
