@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="pre commit added, fix userPage">
+    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="zustand error, commit for latest initializations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,7 @@
       <workItem from="1756876085296" duration="25013000" />
       <workItem from="1756962802716" duration="15449000" />
       <workItem from="1758190006509" duration="2081000" />
-      <workItem from="1758192246790" duration="8031000" />
+      <workItem from="1758192246790" duration="10430000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -196,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758192890780</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="zustand error, commit for latest initializations">
+      <option name="closed" value="true" />
+      <created>1758200869404</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1758200869404</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +226,7 @@
     <MESSAGE value="Json Server and DnD table added" />
     <MESSAGE value="Login form change to bootstrap styles" />
     <MESSAGE value="pre commit added, fix userPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre commit added, fix userPage" />
+    <MESSAGE value="zustand error, commit for latest initializations" />
+    <option name="LAST_COMMIT_MESSAGE" value="zustand error, commit for latest initializations" />
   </component>
 </project>

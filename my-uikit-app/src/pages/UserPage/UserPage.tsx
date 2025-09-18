@@ -6,7 +6,7 @@ export const UserPage = () => {
         <>
             <div className={classes.UserPage}>
                 <Container >
-                    <Image></Image>
+                    <Image src={"#"}></Image>
                     <Form>
                         <Form.Group>
                             <Form.Label> Логин</Form.Label>
