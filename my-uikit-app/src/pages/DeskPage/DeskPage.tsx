@@ -5,7 +5,6 @@ import { useState } from 'react'
 import { DndContext } from '@dnd-kit/core'
 import { Draggable } from '../../shared/ui/dragAndDrop/Draggable/Draggable.tsx'
 import { Droppable } from '../../shared/ui/dragAndDrop/Droppable.tsx'
-import { NavLinks } from '../../shared/ui/NavLinks/NavLinks.tsx'
 
 interface Task {
     id: string
@@ -52,7 +51,6 @@ export const DeskPage = () => {
 
     return (
         <>
-            <NavLinks />
             <Container fluid>
                 <DndContext onDragEnd={handleDragEnd}>
                     <Table responsive="xl" className={classes.DeskPageTable}>

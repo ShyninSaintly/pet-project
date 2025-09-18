@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Button, Form } from 'react-bootstrap'
 
-export const NavLinks = (header: string) => {
+export const NavLinks = (header?: string) => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary" fixed={"top"} content={"Form"} defaultValue={"angular"}>
             <Container fluid>
@@ -15,10 +15,10 @@ export const NavLinks = (header: string) => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
-                        <Nav.Link href="#" disabled>
-                            Link
+                        <Nav.Link href="/">Главная</Nav.Link>
+                        <Nav.Link href="/dashboard">Кабан доска</Nav.Link>
+                        <Nav.Link href="/user">
+                            Профиль
                         </Nav.Link>
                     </Nav>
                     <Form className="d-flex">
