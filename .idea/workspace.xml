@@ -4,10 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Json Server and DnD table added">
+    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Login form change to bootstrap styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/prettier.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/prettier.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Droppable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Droppable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/tsconfig.node.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/tsconfig.node.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +62,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\projects\\pet-proj\\my-uikit-app\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -51,7 +74,7 @@
       <recent name="C:\projects\pet-proj\my-uikit-app\src\pages\LoginPage" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/my-uikit-app/package.json" />
       <command value="run" />
@@ -62,9 +85,20 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/my-uikit-app/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -91,7 +125,9 @@
       <workItem from="1756810323070" duration="2406000" />
       <workItem from="1756812771751" duration="8179000" />
       <workItem from="1756876085296" duration="25013000" />
-      <workItem from="1756962802716" duration="15398000" />
+      <workItem from="1756962802716" duration="15449000" />
+      <workItem from="1758190006509" duration="2081000" />
+      <workItem from="1758192246790" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -149,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756981598387</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Login form change to bootstrap styles">
+      <option name="closed" value="true" />
+      <created>1756985563963</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756985563963</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +216,17 @@
     <MESSAGE value="Added use Droppable" />
     <MESSAGE value="DnD table Made" />
     <MESSAGE value="Json Server and DnD table added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Json Server and DnD table added" />
+    <MESSAGE value="Login form change to bootstrap styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login form change to bootstrap styles" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

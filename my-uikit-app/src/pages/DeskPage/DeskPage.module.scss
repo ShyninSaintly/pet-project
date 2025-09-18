@@ -1,16 +1,16 @@
 .DeskPageTable {
-  width:100%;
-  border: 1px solid #dddddd;
-  border-collapse: collapse;
- & thead {
-  padding: 5px;
-  background: #efefef;
-  border: 1px solid #dddddd;
-}
-  & tbody{
-height: 100vh;
-  }
-  & td{
+    width: 100%;
     border: 1px solid #dddddd;
-  }
+    border-collapse: collapse;
+    & thead {
+        padding: 5px;
+        background: #efefef;
+        border: 1px solid #dddddd;
+    }
+    & tbody {
+        height: 100vh;
+    }
+    & td {
+        border: 1px solid #dddddd;
+    }
 }
