@@ -4,10 +4,16 @@
             "id": "1",
             "title": "a title",
             "description": "dsdasdsdsdsdsdsd",
-            "author": "Glebik",
+            "author": "Admin",
             "dateOfCreation":"01.02.2024"
         },
-        { "id": "2", "title": "another title", "dateOfCreaion":"01.12.2024" }
+        {
+            "id": "2",
+            "title": "another title",
+            "description": "dsdasdsdsdsdsdsd",
+            "author": "Admin",
+            "dateOfCreation":"01.12.2024"
+        }
     ],
     "users": [
         {

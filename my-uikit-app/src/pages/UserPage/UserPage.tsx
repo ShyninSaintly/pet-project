@@ -18,7 +18,7 @@ export const UserPage = () => {
                             />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label> Должность</Form.Label>
+                            <Form.Label>Должность</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Изменить должность"
@@ -34,7 +34,7 @@ export const UserPage = () => {
                             />
                         </Form.Group>
                         <Button  variant="primary" type="submit">Сохранить</Button>
-                    </Form>
+                </Form>
             </div>
         </Container>
     )

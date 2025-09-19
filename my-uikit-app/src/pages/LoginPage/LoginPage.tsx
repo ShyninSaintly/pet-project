@@ -77,7 +77,6 @@ export const LoginPage = () => {
                     onChange={handleRememberMe}
                 />
             </Form.Group>
-
             <Button variant="primary" type="submit">
                 Войти
             </Button>
