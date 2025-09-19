@@ -1,17 +1,17 @@
 import {Card,Button} from "react-bootstrap";
 
-export const Task = () => {
+export const Task = (data) => {
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Body>
-                <Card.Title>Название проекта</Card.Title>
+                <Card.Title>data.title</Card.Title>
                 <Card.Text>
-                    Описание проекта
+                    data.description
                 </Card.Text>
                 <Card.Text>
-                    Автор проекта
+                    data.author
                 </Card.Text>
-                <Card.Text>Дата создания</Card.Text>
+                <Card.Text>data.dateOfCreation</Card.Text>
                 <Button variant="primary">К задаче</Button>
             </Card.Body>
         </Card>

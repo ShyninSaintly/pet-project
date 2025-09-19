@@ -3,7 +3,9 @@
         {
             "id": "1",
             "title": "a title",
-            "dateOfCreaion":"01.02.2024"
+            "description": "dsdasdsdsdsdsdsd",
+            "author": "Glebik",
+            "dateOfCreation":"01.02.2024"
         },
         { "id": "2", "title": "another title", "dateOfCreaion":"01.12.2024" }
     ],
