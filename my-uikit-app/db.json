@@ -1,17 +1,21 @@
 {
     "tasks": [
-        { "id": "1", "title": "a title",
-            "dateOfCreaion":
+        {
+            "id": "1",
+            "title": "a title",
+            "dateOfCreaion":"01.02.2024"
         },
-        { "id": "2", "title": "another title",  }
+        { "id": "2", "title": "another title", "dateOfCreaion":"01.12.2024" }
     ],
     "users": [
         {
             "userName": "Admin",
+            "job": "Администратор",
             "password": "test"
         },
         {
             "userName": "User",
+            "job": "Работник",
             "password": "test"
         }
     ]
