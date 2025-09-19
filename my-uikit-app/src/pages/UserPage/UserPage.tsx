@@ -13,7 +13,7 @@ export const UserPage = () => {
                             <Form.Label> Логин</Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="Логин"
+                                placeholder=" Изменить логин"
                                 required
                             />
                         </Form.Group>
@@ -21,7 +21,7 @@ export const UserPage = () => {
                         <Form.Label> Должность</Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Логин"
+                            placeholder="Изменить должность"
                             required
                         />
                     </Form.Group>
@@ -29,7 +29,7 @@ export const UserPage = () => {
                             <Form.Label>Пароль</Form.Label>
                             <Form.Control
                                 type="password"
-                                placeholder="Пароль"
+                                placeholder=" Изменить пароль"
                                 required
                             />
                         </Form.Group>

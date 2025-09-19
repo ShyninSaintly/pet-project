@@ -1,11 +1,13 @@
 import { Container } from 'uikit-react'
+import {NavLinks} from "../../shared/ui/NavLinks/NavLinks.tsx";
 export const MainPage = () => {
     return (
-        <Container>
+        <><NavLinks/>
+        <Container marginTop='100px'>
             <h1>Главная</h1>
             <li>
 
             </li>
         </Container>
-    )
+    </>)
 }
