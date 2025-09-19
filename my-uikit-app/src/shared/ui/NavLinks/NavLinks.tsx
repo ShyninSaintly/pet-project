@@ -1,35 +1,21 @@
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import { Button, Form } from 'react-bootstrap'
-
-export const NavLinks = (header?: string) => {
+import {NavDropdown} from 'react-bootstrap'
+import classes from './NavLinks.module.scss'
+export const NavLinks = () => {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary" fixed={"top"} content={"Form"} defaultValue={"angular"}>
-            <Container fluid>
-                <Navbar.Brand href="#">{header}</Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll
-                    >
+        <Navbar expand="lg" className={classes.NavLinks} >
+            <Container>
+                <Navbar.Brand>Название стараницы</Navbar.Brand>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className={classes.NavLinksNav}>
                         <Nav.Link href="/">Главная</Nav.Link>
-                        <Nav.Link href="/dashboard">Кабан доска</Nav.Link>
-                        <Nav.Link href="/user">
-                            Профиль
-                        </Nav.Link>
+                        <Nav.Link href="/user">Профиль</Nav.Link>
+                        <Nav.Link href="/login">Кабан-доска</Nav.Link>
+                        <Nav.Link href="/dashboard">Кабан-доска</Nav.Link>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                     </Nav>
-                    <Form className="d-flex">
-                        <Form.Control
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                        />
-                        <Button variant="outline-success">Search</Button>
-                    </Form>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

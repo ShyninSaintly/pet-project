@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="zustand error, commit for latest initializations">
+    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="NavBar initialization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/NavLinks/NavLinks.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,25 +34,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "project",
-    "last_opened_file_path": "C:/projects/pet-proj",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\projects\\pet-proj\\my-uikit-app\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/pet-proj&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\projects\\pet-proj\\my-uikit-app\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\pet-proj\my-uikit-app\src\shared\ui\dragAndDrop\Draggable" />
@@ -88,8 +92,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -119,7 +123,8 @@
       <workItem from="1756876085296" duration="25013000" />
       <workItem from="1756962802716" duration="15449000" />
       <workItem from="1758190006509" duration="2081000" />
-      <workItem from="1758192246790" duration="10430000" />
+      <workItem from="1758192246790" duration="11296000" />
+      <workItem from="1758258535058" duration="6796000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -201,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758200869404</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="zustand error, commit for latest initializations">
+      <option name="closed" value="true" />
+      <created>1758203137653</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1758203137653</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +240,7 @@
     <MESSAGE value="Login form change to bootstrap styles" />
     <MESSAGE value="pre commit added, fix userPage" />
     <MESSAGE value="zustand error, commit for latest initializations" />
-    <option name="LAST_COMMIT_MESSAGE" value="zustand error, commit for latest initializations" />
+    <MESSAGE value="NavBar initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="NavBar initialization" />
   </component>
 </project>

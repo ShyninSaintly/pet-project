@@ -1,11 +1,12 @@
 import { Container, Form, Image } from 'react-bootstrap'
 import classes from './UserPage.module.scss'
 import Button from "react-bootstrap/Button";
+import {NavLinks} from "../../shared/ui/NavLinks/NavLinks.tsx";
 export const UserPage = () => {
     return (
-        <>
+        <Container >
+            <NavLinks/>
             <div className={classes.UserPage}>
-                <Container >
                     <Image src={"#"}></Image>
                     <Form>
                         <Form.Group>
@@ -24,10 +25,9 @@ export const UserPage = () => {
                                 required
                             />
                         </Form.Group>
-                        <Button variant="primary" type="submit">Сохранить</Button>
+                        <Button  variant="primary" type="submit">Сохранить</Button>
                     </Form>
-                </Container>
             </div>
-        </>
+        </Container>
     )
 }
