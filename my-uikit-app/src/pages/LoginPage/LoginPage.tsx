@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import { Form } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from 'react-router-dom'
@@ -8,10 +8,51 @@ export const LoginPage = () => {
     const [password, setPassword] = useState('')
     const [rememberMe, setRememberMe] = useState(false)
     const [error, setError] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
     const navigate = useNavigate()
+
+    // Проверяем сохраненные данные при загрузке компонента
+    useEffect(() => {
+        const rememberedUser = localStorage.getItem('rememberedUser')
+        if (rememberedUser) {
+            const userData = JSON.parse(rememberedUser)
+            setLogin(userData.login)
+            setPassword(userData.password)
+            setRememberMe(true)
+
+            // Автоматически выполняем вход
+            handleAutoLogin(userData.login, userData.password)
+        }
+    }, [])
+
+    const handleAutoLogin = async (savedLogin: string, savedPassword: string) => {
+        setIsLoading(true)
+        try {
+            const response = await fetch('http://localhost:3000/users')
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`)
+            }
+            const users = await response.json()
+            const user = users.find((u: any) => u.userName === savedLogin)
+
+            if (user && user.password === savedPassword) {
+                navigate('/')
+            } else {
+                // Если сохраненные данные неверны, очищаем localStorage
+                localStorage.removeItem('rememberedUser')
+                setError('Сохраненные данные устарели. Войдите снова.')
+            }
+        } catch (error) {
+            console.error('Error:', error)
+            setError('Ошибка подключения к серверу')
+        } finally {
+            setIsLoading(false)
+        }
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
+        setIsLoading(true)
         setError('')
         try {
             const response = await fetch('http://localhost:3000/users')
@@ -20,20 +61,28 @@ export const LoginPage = () => {
             }
             const users = await response.json()
             const user = users.find((u: any) => u.userName === login)
+
             if (user && user.password === password) {
-                navigate('/')
+                // Сохраняем данные если отмечен чекбокс
                 if (rememberMe) {
                     localStorage.setItem(
                         'rememberedUser',
                         JSON.stringify({ login, password })
                     )
+                } else {
+                    // Если чекбокс не отмечен, удаляем сохраненные данные
+                    localStorage.removeItem('rememberedUser')
                 }
+
+                navigate('/')
             } else {
                 setError('Неверный логин или пароль')
             }
         } catch (error) {
             console.error('Error:', error)
             setError('Ошибка подключения к серверу')
+        } finally {
+            setIsLoading(false)
         }
     }
 
@@ -43,6 +92,10 @@ export const LoginPage = () => {
         },
         []
     )
+
+    if (isLoading) {
+        return <div>Загрузка...</div>
+    }
 
     return (
         <Form onSubmit={handleSubmit}>

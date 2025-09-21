@@ -1,30 +1,75 @@
 {
-    "tasks": [
-        {
-            "id": "1",
-            "title": "a title",
-            "description": "dsdasdsdsdsdsdsd",
-            "author": "Admin",
-            "dateOfCreation":"01.02.2024"
-        },
-        {
-            "id": "2",
-            "title": "another title",
-            "description": "dsdasdsdsdsdsdsd",
-            "author": "Admin",
-            "dateOfCreation":"01.12.2024"
-        }
-    ],
-    "users": [
-        {
-            "userName": "Admin",
-            "job": "Администратор",
-            "password": "test"
-        },
-        {
-            "userName": "User",
-            "job": "Работник",
-            "password": "test"
-        }
-    ]
+  "desks": [
+    {
+      "id": "1",
+      "title": "Проект А",
+      "description": "Описание проекта А",
+      "author": "Admin",
+      "dateOfCreation": "01.02.2024"
+    },
+    {
+      "id": "2",
+      "title": "Проект Б",
+      "description": "Описание проекта Б",
+      "author": "Admin",
+      "dateOfCreation": "01.12.2024"
+    },
+    {
+      "id": "3",
+      "title": "Проект В",
+      "description": "Описание проекта В",
+      "author": "User",
+      "dateOfCreation": "01.12.2024"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "deskId": "1",
+      "title": "Задача 1",
+      "description": "Описание задачи 1",
+      "author": "Admin",
+      "column": "todo",
+      "dateOfCreation": "01.02.2024"
+    },
+    {
+      "id": "2",
+      "deskId": "1",
+      "title": "Задача 2",
+      "description": "Описание задачи 2",
+      "author": "Admin",
+      "column": "inProgress",
+      "dateOfCreation": "02.02.2024"
+    },
+    {
+      "id": "3",
+      "deskId": "2",
+      "title": "Задача 3",
+      "description": "Описание задачи 3",
+      "author": "Admin",
+      "column": "todo",
+      "dateOfCreation": "01.12.2024"
+    },
+    {
+      "id": "4",
+      "deskId": "3",
+      "title": "Задача 4",
+      "description": "Описание задачи 4",
+      "author": "User",
+      "column": "todo",
+      "dateOfCreation": "01.12.2024"
+    }
+  ],
+  "users": [
+    {
+      "userName": "Admin",
+      "job": "Администратор",
+      "password": "test"
+    },
+    {
+      "userName": "User",
+      "job": "Работник",
+      "password": "test"
+    }
+  ]
 }
