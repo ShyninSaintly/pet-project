@@ -33,6 +33,8 @@ export const LoginPage = () => {
             const user = users.find((u: any) => u.userName === savedLogin)
 
             if (user && user.password === savedPassword) {
+                // Сохраняем пользователя в sessionStorage для использования в других компонентах
+                sessionStorage.setItem('currentUser', savedLogin)
                 navigate('/')
             } else {
                 localStorage.removeItem('rememberedUser')
@@ -59,15 +61,17 @@ export const LoginPage = () => {
             const user = users.find((u: any) => u.userName === login)
 
             if (user && user.password === password) {
+                // Сохраняем пользователя в sessionStorage для использования в других компонентах
+                sessionStorage.setItem('currentUser', login)
+
                 if (rememberMe) {
                     localStorage.setItem(
                         'rememberedUser',
-                        JSON.stringify({login, password})
+                        JSON.stringify({ login, password })
                     )
                 } else {
                     localStorage.removeItem('rememberedUser')
                 }
-
                 navigate('/')
             } else {
                 setError('Неверный логин или пароль')

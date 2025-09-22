@@ -83,6 +83,33 @@
       "author": "User",
       "column": "todo",
       "dateOfCreation": "01.02.2024"
+    },
+    {
+      "id": "7",
+      "deskId": "desk3",
+      "title": "Задача 7",
+      "description": "Описание задачи 7",
+      "author": "User",
+      "column": "todo",
+      "dateOfCreation": "01.02.2024"
+    },
+    {
+      "id": "8",
+      "deskId": "desk4",
+      "title": "Задача 8",
+      "description": "Описание задачи 8",
+      "author": "User",
+      "column": "inProgress",
+      "dateOfCreation": "01.02.2024"
+    },
+    {
+      "id": "8",
+      "deskId": "desk4",
+      "title": "Задача 9",
+      "description": "Описание задачи 8",
+      "author": "User",
+      "column": "todo",
+      "dateOfCreation": "01.02.2024"
     }
   ],
   "users": [
@@ -94,7 +121,7 @@
     {
       "userName": "User",
       "job": "Работник",
-      "password": "test"
+      "password": "testUser"
     }
   ]
 }

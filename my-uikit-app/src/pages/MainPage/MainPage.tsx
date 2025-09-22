@@ -3,6 +3,7 @@ import {Alert,Card,Container} from 'react-bootstrap'
 import { NavLinks } from "../../shared/ui/NavLinks/NavLinks.tsx";
 //import { Task } from "../../shared/ui/Task/Task.tsx";
 import { Link } from "react-router-dom";
+import {Task} from "../../shared/ui/Task/Task.tsx";
 
 interface DeskType {
     id: string;
@@ -63,38 +64,18 @@ export const MainPage = () => {
             <NavLinks />
             <Container>
                 <h1>Главная</h1>
-                {error && <Alert >{error}</Alert>}
-                {currentUser ? (
                     <>
                         <h2>Доски пользователя: {currentUser}</h2>
                         <ul>
                             {desks.length > 0 ? (
                                 desks.map(desk => (
-                                    <li key={desk.id}>
-                                        <Link to={`/desk/${desk.id}`}>
-                                            <Card style={{ width: '18rem' }}>
-                                                <Card.Body>
-                                                    <Card.Title>{desk.title}</Card.Title>
-                                                    <Card.Text>
-                                                        {desk.description}
-                                                    </Card.Text>
-                                                    <Card.Text>
-                                                        Автор: {desk.author}
-                                                    </Card.Text>
-                                                    <Card.Text>Дата создания: {desk.dateOfCreation}</Card.Text>
-                                                </Card.Body>
-                                            </Card>
-                                        </Link>
-                                    </li>
+                                    <Task data={desk}/>
                                 ))
                             ) : (
                                 <p>Нет доступных досок</p>
                             )}
                         </ul>
                     </>
-                ) : (
-                    <Alert >Пожалуйста, войдите в систему</Alert>
-                )}
             </Container>
         </>
     );
