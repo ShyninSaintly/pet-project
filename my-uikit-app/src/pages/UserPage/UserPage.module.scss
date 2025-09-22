@@ -4,7 +4,9 @@
   justify-content: center;
   height: 100vh;
   color: white;
+
   &FormItems{
+    padding:20px;
     width:50vh;
     justify-items: center;
     background-color:#4f94ec;
@@ -17,7 +19,6 @@
     width:200px;
     height:60px;
     border-radius:5px;
-
   }
   &Label{
     width:100px;
