@@ -15,11 +15,8 @@ export const Draggable = (props: { id: string; children: React.ReactNode }) => {
     return (
         <Card style={style} className={classes.Draggable}>
             <CardBody ref={setNodeRef} {...listeners} {...attributes}>
-                <Card.Title className={classes.DraggableTitle}>
-                    Название Задачи
-                </Card.Title>
-                <Card.Text>{props.children}</Card.Text>
-                <Card.Link href="#">Перейти к задаче</Card.Link>
+                <Card.Text className={classes.DraggableText}>{props.children}</Card.Text>
+                <Card.Link className={classes.DraggableLink} href="#">Перейти к задаче</Card.Link>
             </CardBody>
         </Card>
     )

@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from 'react'
 import { Form } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from 'react-router-dom'
-
+import classes from './LoginPage.module.scss'
 export const LoginPage = () => {
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
@@ -33,7 +33,6 @@ export const LoginPage = () => {
             const user = users.find((u: any) => u.userName === savedLogin)
 
             if (user && user.password === savedPassword) {
-                // Сохраняем пользователя в sessionStorage для использования в других компонентах
                 sessionStorage.setItem('currentUser', savedLogin)
                 navigate('/')
             } else {
@@ -61,7 +60,6 @@ export const LoginPage = () => {
             const user = users.find((u: any) => u.userName === login)
 
             if (user && user.password === password) {
-                // Сохраняем пользователя в sessionStorage для использования в других компонентах
                 sessionStorage.setItem('currentUser', login)
 
                 if (rememberMe) {
@@ -96,11 +94,14 @@ export const LoginPage = () => {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <div className={classes.LoginPage}>
+        <Form onSubmit={handleSubmit} className={classes.LoginPageForm}>
             {error && <div className="alert alert-danger">{error}</div>}
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Логин</Form.Label>
+            <Form.Group className={classes.LoginPageForm} controlId="formBasicEmail">
+                <Form.Text><h1>Авторизация</h1></Form.Text>
+                <Form.Label className={classes.LoginPageLabel}>Логин</Form.Label>
                 <Form.Control
+                    className={classes.LoginPageControl}
                     type="text"
                     placeholder="Логин"
                     value={login}
@@ -108,10 +109,10 @@ export const LoginPage = () => {
                     required
                 />
             </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Пароль</Form.Label>
+            <Form.Group className={classes.LoginPageForm} controlId="formBasicPassword">
+                <Form.Label className={classes.LoginPageLabel}>Пароль</Form.Label>
                 <Form.Control
+                    className={classes.LoginPageControl}
                     type="password"
                     placeholder="Пароль"
                     value={password}
@@ -120,7 +121,7 @@ export const LoginPage = () => {
                 />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Group className={classes.LoginPageForm} controlId="formBasicCheckbox">
                 <Form.Check
                     type="checkbox"
                     label="Запомнить меня?"
@@ -128,9 +129,10 @@ export const LoginPage = () => {
                     onChange={handleRememberMe}
                 />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button className={classes.LoginPageButton} variant="primary" type="submit">
                 Войти
             </Button>
         </Form>
+        </div>
     );
 }

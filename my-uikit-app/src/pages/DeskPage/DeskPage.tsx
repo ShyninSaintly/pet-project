@@ -46,8 +46,6 @@ export const DeskPage = () => {
             fetchTasks()
         }
     }, [deskId])
-
-    // Группируем задачи по колонкам
     const items: Record<ColumnId, Task[]> = {
         todo: tasks.filter(task => task.column === 'todo'),
         inProgress: tasks.filter(task => task.column === 'inProgress'),
@@ -62,15 +60,9 @@ export const DeskPage = () => {
 
         const taskId = active.id
         const destinationColumn = over.id as ColumnId
-
-        // Находим задачу
         const task = tasks.find(t => t.id === taskId)
         if (!task) return
-
-        // Если колонка не изменилась, выходим
         if (task.column === destinationColumn) return
-
-        // Обновляем задачу на сервере
         try {
             const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
                 method: 'PATCH',
@@ -83,8 +75,6 @@ export const DeskPage = () => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`)
             }
-
-            // Обновляем локальное состояние
             setTasks(prevTasks =>
                 prevTasks.map(t =>
                     t.id === taskId ? { ...t, column: destinationColumn } : t

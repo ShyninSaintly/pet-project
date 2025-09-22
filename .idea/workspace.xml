@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="reformated Table render">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +120,7 @@
       <workItem from="1758190006509" duration="2081000" />
       <workItem from="1758192246790" duration="11296000" />
       <workItem from="1758258535058" duration="20171000" />
-      <workItem from="1758517731591" duration="9844000" />
+      <workItem from="1758517731591" duration="10466000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -278,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758527302389</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="reformated Table render">
+      <option name="closed" value="true" />
+      <created>1758528628865</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1758528628865</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
