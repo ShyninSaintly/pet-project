@@ -9,7 +9,7 @@ export const UserPage = () => {
             <div className={classes.UserPage}>
                 <Form className={classes.UserPageFormItems}>
                     <Image></Image>
-                        <Form.Group>
+                        <Form.Group className={classes.UserPageFormGroup}>
                             <Form.Label>Логин</Form.Label>
                             <Form.Control
                                 type="text"
@@ -17,15 +17,15 @@ export const UserPage = () => {
                                 required
                             />
                         </Form.Group>
-                        <Form.Group>
-                            <Form.Label>Должность</Form.Label>
+                        <Form.Group className={classes.UserPageFormGroup}>
+                            <Form.Label >Должность</Form.Label>
                             <Form.Control
                                 type="text"
                                 placeholder="Изменить должность"
                                 required
                             />
                         </Form.Group>
-                        <Form.Group>
+                        <Form.Group className={classes.UserPageFormGroup}>
                             <Form.Label>Пароль</Form.Label>
                             <Form.Control
                                 type="password"
