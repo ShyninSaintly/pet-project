@@ -17,14 +17,16 @@ export const Task = ({ data }: TaskProps) => {
             <Link to={`/desk/${data.id}`}>
                 <Card className={classes.TaskCard}>
                     <Card.Body>
-                        <Card.Title>{data.title}</Card.Title>
-                        <Card.Text>
+                        <Card.Title className={classes.TaskText}>{data.title}</Card.Title>
+                        <Card.Text className={classes.TaskText}>
                             {data.description}
                         </Card.Text>
-                        <Card.Text>
+                        <Card.Text className={classes.TaskText}>
                             Автор: {data.author}
                         </Card.Text>
-                        <Card.Text>Дата создания: {data.dateOfCreation}</Card.Text>
+                        <Card.Text className={classes.TaskText}>
+                            Дата создания: {data.dateOfCreation}
+                        </Card.Text>
                     </Card.Body>
                 </Card>
             </Link>

@@ -66,7 +66,7 @@ export const MainPage = () => {
                 <h1>Главная</h1>
                     <>
                         <h2>Доски пользователя: {currentUser}</h2>
-                        <ul>
+                        <ul style={{ listStyleType: 'none' }}>
                             {desks.length > 0 ? (
                                 desks.map(desk => (
                                     <Task data={desk}/>

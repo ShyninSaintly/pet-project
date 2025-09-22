@@ -72,7 +72,7 @@
       "title": "Задача 5",
       "description": "Описание задачи 5",
       "author": "User",
-      "column": "todo",
+      "column": "done",
       "dateOfCreation": "01.02.2024"
     },
     {
@@ -90,7 +90,7 @@
       "title": "Задача 7",
       "description": "Описание задачи 7",
       "author": "User",
-      "column": "todo",
+      "column": "inProgress",
       "dateOfCreation": "01.02.2024"
     },
     {

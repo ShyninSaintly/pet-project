@@ -1,8 +1,10 @@
 .Task{
   &Card{
     background-color:#4f94ec ;
+    border-radius:10px;
+    text-decoration: none;
   }
   &Text{
-    color:#ffffff;
+    color: #000000;
   }
 }
