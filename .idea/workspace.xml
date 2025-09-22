@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Awailible tasks render, from db">
+    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="correct fetching data">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_09_2025_8_08_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_09_2025_8_08__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/LoginPage/LoginPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +124,8 @@
       <workItem from="1756962802716" duration="15449000" />
       <workItem from="1758190006509" duration="2081000" />
       <workItem from="1758192246790" duration="11296000" />
-      <workItem from="1758258535058" duration="19701000" />
+      <workItem from="1758258535058" duration="20171000" />
+      <workItem from="1758517731591" duration="1963000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -253,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758281150912</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="correct fetching data">
+      <option name="closed" value="true" />
+      <created>1758284425409</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1758284425409</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +293,7 @@
     <MESSAGE value="Task component initialization" />
     <MESSAGE value="Db fix" />
     <MESSAGE value="Awailible tasks render, from db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Awailible tasks render, from db" />
+    <MESSAGE value="correct fetching data" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct fetching data" />
   </component>
 </project>

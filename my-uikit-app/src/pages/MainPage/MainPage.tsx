@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import {Alert,Card,Container} from 'react-bootstrap'
 import { NavLinks } from "../../shared/ui/NavLinks/NavLinks.tsx";
-import { Task } from "../../shared/ui/Task/Task.tsx";
+//import { Task } from "../../shared/ui/Task/Task.tsx";
 import { Link } from "react-router-dom";
 
 interface DeskType {
@@ -31,7 +31,6 @@ export const MainPage = () => {
                 const desksData = await response.json();
                 setDesks(desksData);
 
-                // Фильтруем доски по текущему пользователю
                 if (user) {
                     const userDesks = desksData.filter((desk: DeskType) => desk.author === user);
                     setDesks(userDesks);
@@ -65,7 +64,7 @@ export const MainPage = () => {
             <Container>
                 <h1>Главная</h1>
                 {error && <Alert >{error}</Alert>}
-                {!currentUser ? (
+                {currentUser ? (
                     <>
                         <h2>Доски пользователя: {currentUser}</h2>
                         <ul>

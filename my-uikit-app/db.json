@@ -1,23 +1,30 @@
 {
   "desks": [
     {
-      "id": "1",
-      "title": "Проект А",
-      "description": "Описание проекта А",
+      "id": "desk1",
+      "title": "Доска 1",
+      "description": "Описание доски 1",
       "author": "Admin",
       "dateOfCreation": "01.02.2024"
     },
     {
-      "id": "2",
-      "title": "Проект Б",
-      "description": "Описание проекта Б",
+      "id": "desk2",
+      "title": "Доска 2",
+      "description": "Описание доски 2",
       "author": "Admin",
       "dateOfCreation": "01.12.2024"
     },
     {
-      "id": "3",
-      "title": "Проект В",
-      "description": "Описание проекта В",
+      "id": "desk3",
+      "title": "Доска 3",
+      "description": "Описание доски 3",
+      "author": "User",
+      "dateOfCreation": "11.12.2025"
+    },
+    {
+      "id": "desk4",
+      "title": "Доска 4",
+      "description": "Описание доски 4",
       "author": "User",
       "dateOfCreation": "01.12.2024"
     }
@@ -25,7 +32,7 @@
   "tasks": [
     {
       "id": "1",
-      "deskId": "1",
+      "deskId": "desk1",
       "title": "Задача 1",
       "description": "Описание задачи 1",
       "author": "Admin",
@@ -34,7 +41,7 @@
     },
     {
       "id": "2",
-      "deskId": "1",
+      "deskId": "desk1",
       "title": "Задача 2",
       "description": "Описание задачи 2",
       "author": "Admin",
@@ -43,7 +50,7 @@
     },
     {
       "id": "3",
-      "deskId": "2",
+      "deskId": "desk2",
       "title": "Задача 3",
       "description": "Описание задачи 3",
       "author": "Admin",
@@ -52,12 +59,30 @@
     },
     {
       "id": "4",
-      "deskId": "3",
+      "deskId": "desk3",
       "title": "Задача 4",
       "description": "Описание задачи 4",
       "author": "User",
       "column": "todo",
       "dateOfCreation": "01.12.2024"
+    },
+    {
+      "id": "5",
+      "deskId": "desk3",
+      "title": "Задача 5",
+      "description": "Описание задачи 5",
+      "author": "User",
+      "column": "todo",
+      "dateOfCreation": "01.02.2024"
+    },
+    {
+      "id": "6",
+      "deskId": "desk3",
+      "title": "Задача 6",
+      "description": "Описание задачи 6",
+      "author": "User",
+      "column": "todo",
+      "dateOfCreation": "01.02.2024"
     }
   ],
   "users": [

@@ -11,7 +11,6 @@ export const LoginPage = () => {
     const [isLoading, setIsLoading] = useState(false)
     const navigate = useNavigate()
 
-    // Проверяем сохраненные данные при загрузке компонента
     useEffect(() => {
         const rememberedUser = localStorage.getItem('rememberedUser')
         if (rememberedUser) {
@@ -19,8 +18,6 @@ export const LoginPage = () => {
             setLogin(userData.login)
             setPassword(userData.password)
             setRememberMe(true)
-
-            // Автоматически выполняем вход
             handleAutoLogin(userData.login, userData.password)
         }
     }, [])
@@ -38,7 +35,6 @@ export const LoginPage = () => {
             if (user && user.password === savedPassword) {
                 navigate('/')
             } else {
-                // Если сохраненные данные неверны, очищаем localStorage
                 localStorage.removeItem('rememberedUser')
                 setError('Сохраненные данные устарели. Войдите снова.')
             }
@@ -63,14 +59,12 @@ export const LoginPage = () => {
             const user = users.find((u: any) => u.userName === login)
 
             if (user && user.password === password) {
-                // Сохраняем данные если отмечен чекбокс
                 if (rememberMe) {
                     localStorage.setItem(
                         'rememberedUser',
-                        JSON.stringify({ login, password })
+                        JSON.stringify({login, password})
                     )
                 } else {
-                    // Если чекбокс не отмечен, удаляем сохраненные данные
                     localStorage.removeItem('rememberedUser')
                 }
 
@@ -134,5 +128,5 @@ export const LoginPage = () => {
                 Войти
             </Button>
         </Form>
-    )
+    );
 }
