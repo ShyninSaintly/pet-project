@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export const Example=()=> {
+export const CreateDesk=()=> {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -13,7 +13,6 @@ export const Example=()=> {
             <Button variant="primary" onClick={handleShow}>
                 Создать доску
             </Button>
-
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Создание доски</Modal.Title>
