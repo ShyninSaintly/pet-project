@@ -1,32 +1,185 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import Form from "react-bootstrap/Form";
+import { useNavigate } from 'react-router-dom';
+import classes from './CreateTask.module.scss';
 
-export const CreateTask=()=> {
-    const [show, setShow] = useState(false);
+interface Desk {
+    id: string;
+    title: string;
+}
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+interface TaskData {
+    id: string;
+    deskId: string | null;
+    title: string;
+    description: string;
+    author: string;
+    column: string;
+    dateOfCreation: string;
+}
+
+export const CreateTask = () => {
+    const [taskTitle, setTaskTitle] = useState('');
+    const [taskDescription, setTaskDescription] = useState('');
+    const [selectedDeskId, setSelectedDeskId] = useState<string>('');
+    const [desks, setDesks] = useState<Desk[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+
+    // Загружаем список досок при монтировании компонента
+    useEffect(() => {
+        const fetchDesks = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/desks');
+                if (!response.ok) {
+                    throw new Error(`Ошибка HTTP: ${response.status}`);
+                }
+                const desksData = await response.json();
+                setDesks(desksData);
+            } catch (err) {
+                console.error('Ошибка загрузки досок:', err);
+                setError('Ошибка загрузки списка досок');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchDesks();
+    }, []);
+
+    const generateId = () => {
+        return 'task' + Date.now();
+    };
+
+    const getCurrentDate = () => {
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = now.getFullYear();
+        return `${day}.${month}.${year}`;
+    };
+
+    const getCurrentUser = () => {
+        const user = sessionStorage.getItem('currentUser');
+        return user || 'Anonymous';
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!taskTitle.trim() || !taskDescription.trim()) {
+            setError('Название и описание задачи обязательны для заполнения');
+            return;
+        }
+
+        if (!selectedDeskId) {
+            setError('Необходимо выбрать доску');
+            return;
+        }
+
+        try {
+            const newTask: TaskData = {
+                id: generateId(),
+                deskId: selectedDeskId,
+                title: taskTitle.trim(),
+                description: taskDescription.trim(),
+                author: getCurrentUser(),
+                column: 'todo', // Все новые задачи помещаются в колонку "todo"
+                dateOfCreation: getCurrentDate(),
+            };
+
+            const response = await fetch('http://localhost:3000/tasks', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(newTask),
+            });
+
+            if (!response.ok) {
+                throw new Error(`Ошибка HTTP: ${response.status}`);
+            }
+
+            const result = await response.json();
+            console.log('Задача успешно создана:', result);
+            navigate('/');
+
+        } catch (err) {
+            console.error('Ошибка при создании задачи:', err);
+            setError('Ошибка при создании задачи');
+        }
+    };
+
+    const handleCancel = () => {
+        navigate('/');
+    };
+
+    if (loading) {
+        return <div>Загрузка...</div>;
+    }
 
     return (
-        <>
-            <Button variant="primary" onClick={handleShow}>
-                Создать задачу
-            </Button>
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Создание задачи</Modal.Title>
-                </Modal.Header>
-                <Modal.Body></Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Закрыть
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Создать
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </>
+        <Form className={classes.CreateTask} onSubmit={handleSubmit}>
+            <Form.Text><h2>Создание задачи</h2></Form.Text>
+
+            {error && <div className="alert alert-danger">{error}</div>}
+
+            <Form.Group className="mb-3">
+                <Form.Label>Название задачи</Form.Label>
+                <Form.Control
+                    type="text"
+                    placeholder="Введите название задачи"
+                    value={taskTitle}
+                    onChange={(e) => setTaskTitle(e.target.value)}
+                    required
+                />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+                <Form.Label>Описание задачи</Form.Label>
+                <Form.Control
+                    as="textarea"
+                    rows={3}
+                    placeholder="Введите описание задачи"
+                    value={taskDescription}
+                    onChange={(e) => setTaskDescription(e.target.value)}
+                    required
+                />
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+                <Form.Label>Выберите доску</Form.Label>
+                <Form.Select
+                    value={selectedDeskId}
+                    onChange={(e) => setSelectedDeskId(e.target.value)}
+                    required
+                >
+                    {desks.map(desk => (
+                        <option key={desk.id} value={desk.id}>
+                            {desk.title}
+                        </option>
+                    ))}
+                </Form.Select>
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+                <Button
+                    className={classes.CreateTaskButton}
+                    variant="secondary"
+                    onClick={handleCancel}
+                >
+                    Отмена
+                </Button>
+                <Button
+                    className={classes.CreateTaskButton}
+                    variant="primary"
+                    type="submit"
+                >
+                    Создать
+                </Button>
+            </Form.Group>
+        </Form>
     );
-}
+};

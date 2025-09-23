@@ -1,5 +1,5 @@
 import {Button, Card, Modal } from "react-bootstrap";
-import {Link, useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import classes from "./Task.module.scss";
 import {useState} from "react";
 
@@ -14,32 +14,26 @@ interface TaskProps {
 }
 
 export const Task = ({ data }: TaskProps) => {
-    const { deskId } = useParams<{ deskId: string }>();
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const handleDelete = async (e: React.FormEvent) => {
-        e.preventDefault();
-
-        if (!deskId) {
-            return;
-        }
-
+    const handleDelete = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/desks/${deskId}`, {
+            const response = await fetch(`http://localhost:3000/desks/${data.id}`, {
                 method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
             });
 
             if (!response.ok) {
                 throw new Error(`Ошибка HTTP: ${response.status}`);
             }
 
+            console.log('Доска успешно удалена');
+            setShow(false);
+            window.location.reload();
+
         } catch (err) {
-            console.error('Ошибка при обновлении данных:', err);
+            console.error('Ошибка при удалении доски:', err);
         }
     };
 

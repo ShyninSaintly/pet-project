@@ -14,6 +14,8 @@ export const NavLinks = () => {
                         <Nav.Link href="/user">Профиль</Nav.Link>
                         <Nav.Link href="/dashboard">Доска задач</Nav.Link>
                         <Nav.Link href="/login">Выйти</Nav.Link>
+                        <Nav.Link href='/createDesk'>Создать доску</Nav.Link>
+                        <Nav.Link href='/createTask'>Создать задачу</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

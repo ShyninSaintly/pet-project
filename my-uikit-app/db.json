@@ -3,7 +3,7 @@
     {
       "id": "desk1",
       "title": "Доска ИЗм",
-      "description": "Описание доски ИЗм",
+      "description": "Описание доски ИЗ",
       "author": "Admin",
       "dateOfCreation": "01.02.2024"
     },
@@ -27,6 +27,27 @@
       "description": "Описание доски 4",
       "author": "User",
       "dateOfCreation": "01.12.2024"
+    },
+    {
+      "id": "desk1758657271598",
+      "title": "вывывы",
+      "description": "вывы",
+      "author": "Admin",
+      "dateOfCreation": "23.09.2025"
+    },
+    {
+      "id": "desk1758657844462",
+      "title": "вывы",
+      "description": "вывы",
+      "author": "Admin",
+      "dateOfCreation": "23.09.2025"
+    },
+    {
+      "id": "desk1758657887045",
+      "title": "TEstDesk",
+      "description": "testDesk",
+      "author": "Admin",
+      "dateOfCreation": "23.09.2025"
     }
   ],
   "tasks": [
@@ -45,12 +66,12 @@
       "title": "Задача 2",
       "description": "Описание задачи 2",
       "author": "Admin",
-      "column": "testing",
+      "column": "done",
       "dateOfCreation": "02.02.2024"
     },
     {
       "id": "3",
-      "deskId": "desk2",
+      "deskId": null,
       "title": "Задача 3",
       "description": "Описание задачи 3",
       "author": "Admin",
@@ -110,6 +131,15 @@
       "author": "User",
       "column": "inProgress",
       "dateOfCreation": "01.02.2024"
+    },
+    {
+      "id": "task1758661759050",
+      "deskId": "desk1758657887045",
+      "title": "тестовая задачка прачка",
+      "description": "авыаываываываываыфв",
+      "author": "Admin",
+      "column": "todo",
+      "dateOfCreation": "24.09.2025"
     }
   ],
   "users": [
