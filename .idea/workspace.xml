@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="added delete button">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/Edit/Edit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/Edit/Edit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/Edit/Edit.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/Edit/Edit.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +122,7 @@
       <workItem from="1758192246790" duration="11296000" />
       <workItem from="1758258535058" duration="20171000" />
       <workItem from="1758517731591" duration="10466000" />
-      <workItem from="1758605335185" duration="23002000" />
+      <workItem from="1758605335185" duration="23411000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -325,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758633555550</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added delete button">
+      <option name="closed" value="true" />
+      <created>1758635173977</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1758635173977</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
