@@ -13,7 +13,6 @@ interface DeskType {
 
 export const MainPage = () => {
     const [desks, setDesks] = useState<DeskType[]>([]);
-    const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
     const [currentUser, setCurrentUser] = useState<string | null>(null);
 
@@ -35,7 +34,6 @@ export const MainPage = () => {
                     setDesks(userDesks);
                 }
             } catch (err) {
-                setError('Не получилось загрузить доступные доски');
                 console.error('Ошибка загрузки досок:', err);
             } finally {
                 setLoading(false);
@@ -67,7 +65,7 @@ export const MainPage = () => {
                         <ul style={{ listStyleType: 'none' }}>
                             {desks.length > 0 ? (
                                 desks.map(desk => (
-                                    <Task data={desk}/>
+                                    <Task data={desk} key={desk.id}/>
                                 ))
                             ) : (
                                 <p>Нет доступных досок</p>

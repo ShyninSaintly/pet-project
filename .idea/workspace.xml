@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="added create and change buttons, added mock components for creation desks and tasks">
+    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="added createDesk and CreateTask component without data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/Create/CreateDesk/CreateDesk.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/Create/CreateDesk/CreateDesk.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/dragAndDrop/Draggable/Draggable.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +126,7 @@
       <workItem from="1758192246790" duration="11296000" />
       <workItem from="1758258535058" duration="20171000" />
       <workItem from="1758517731591" duration="10466000" />
-      <workItem from="1758605335185" duration="9145000" />
+      <workItem from="1758605335185" duration="16991000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -293,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758615791226</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added createDesk and CreateTask component without data">
+      <option name="closed" value="true" />
+      <created>1758616784186</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1758616784186</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +337,7 @@
     <MESSAGE value="correct fetching data" />
     <MESSAGE value="reformated Table render" />
     <MESSAGE value="added create and change buttons, added mock components for creation desks and tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="added create and change buttons, added mock components for creation desks and tasks" />
+    <MESSAGE value="added createDesk and CreateTask component without data" />
+    <option name="LAST_COMMIT_MESSAGE" value="added createDesk and CreateTask component without data" />
   </component>
 </project>
