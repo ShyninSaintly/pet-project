@@ -41,13 +41,6 @@
       "description": "вывы",
       "author": "Admin",
       "dateOfCreation": "23.09.2025"
-    },
-    {
-      "id": "desk1758657887045",
-      "title": "TEstDesk",
-      "description": "testDesk",
-      "author": "Admin",
-      "dateOfCreation": "23.09.2025"
     }
   ],
   "tasks": [
@@ -134,11 +127,11 @@
     },
     {
       "id": "task1758661759050",
-      "deskId": "desk1758657887045",
+      "deskId": null,
       "title": "тестовая задачка прачка",
       "description": "авыаываываываываыфв",
       "author": "Admin",
-      "column": "todo",
+      "column": "testing",
       "dateOfCreation": "24.09.2025"
     }
   ],

@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from "react-bootstrap/Form";
 import { useNavigate } from 'react-router-dom';
 import classes from './CreateTask.module.scss';
+import {getCurrentDate} from "../../../shared/currentDate/currentDate.tsx";
 
 interface Desk {
     id: string;
@@ -53,14 +54,6 @@ export const CreateTask = () => {
         return 'task' + Date.now();
     };
 
-    const getCurrentDate = () => {
-        const now = new Date();
-        const day = String(now.getDate()).padStart(2, '0');
-        const month = String(now.getMonth() + 1).padStart(2, '0');
-        const year = now.getFullYear();
-        return `${day}.${month}.${year}`;
-    };
-
     const getCurrentUser = () => {
         const user = sessionStorage.getItem('currentUser');
         return user || 'Anonymous';
@@ -86,7 +79,7 @@ export const CreateTask = () => {
                 title: taskTitle.trim(),
                 description: taskDescription.trim(),
                 author: getCurrentUser(),
-                column: 'todo', // Все новые задачи помещаются в колонку "todo"
+                column: 'todo',
                 dateOfCreation: getCurrentDate(),
             };
 

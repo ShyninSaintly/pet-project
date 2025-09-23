@@ -26,9 +26,9 @@
   padding: 40px 20px;
   justify-items: center;
   align-items: center;
-  &Buttons{
- display:flex;
-  }
+ &DeleteButton{
+   background-color:#4f94ec;
+ }
   &Button{
     background-color:#4f94ec ;
     width:100px;
