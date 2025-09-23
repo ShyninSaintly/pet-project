@@ -1,5 +1,5 @@
 import {Button, Card, Modal } from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import classes from "./Task.module.scss";
 import {useState} from "react";
 
@@ -14,6 +14,7 @@ interface TaskProps {
 }
 
 export const Task = ({ data }: TaskProps) => {
+    const { deskId } = useParams<{ deskId: string }>();
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -22,7 +23,6 @@ export const Task = ({ data }: TaskProps) => {
         e.preventDefault();
 
         if (!deskId) {
-            setError("ID доски не указан");
             return;
         }
 
@@ -32,25 +32,14 @@ export const Task = ({ data }: TaskProps) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    title: deskNameCh,
-                    description: deskDescriptionCh,
-                }),
             });
 
             if (!response.ok) {
                 throw new Error(`Ошибка HTTP: ${response.status}`);
             }
-            setSuccess("Доска успешно обновлена!");
-            setError("");
-            setTimeout(() => {
-                navigate("/");
-            }, 2000);
 
         } catch (err) {
             console.error('Ошибка при обновлении данных:', err);
-            setError("Ошибка при обновлении доски");
-            setSuccess("");
         }
     };
 
@@ -78,13 +67,13 @@ export const Task = ({ data }: TaskProps) => {
                     <Card.Img src={'src/assets/delete.png'} width={'40px'} alt="Удалить"/>
                 </Button>
             </Card>
-            <Modal show={show} onHide={handleClose}>
+            <Modal className={classes.Modal} show={show} onHide={handleClose}>
                 <Modal.Body>Вы точно хотите удалить эту доску?</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                <Modal.Footer className={classes.ModalButtons}>
+                    <Button className={classes.ModalButton} variant="secondary" onClick={handleClose}>
                         Отменить
                     </Button>
-                    <Button variant="primary" onClick={handleDelete}>
+                    <Button className={classes.ModalButton} variant="primary" onClick={handleDelete}>
                         Удалить
                     </Button>
                 </Modal.Footer>

@@ -16,3 +16,24 @@
     text-decoration: none;
   }
 }
+.Modal{
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 175px);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  cursor: default;
+  padding: 40px 20px;
+  justify-items: center;
+  align-items: center;
+  &Buttons{
+ display:flex;
+  }
+  &Button{
+    background-color:#4f94ec ;
+    width:100px;
+    height:40px;
+    border-radius:5px;
+    margin-left:20px;
+  }
+}

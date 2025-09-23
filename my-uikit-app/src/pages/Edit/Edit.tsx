@@ -23,7 +23,6 @@ export const Edit = () => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
-    // Загружаем данные доски при монтировании компонента
     useEffect(() => {
         const fetchDeskData = async () => {
             if (!deskId) {
