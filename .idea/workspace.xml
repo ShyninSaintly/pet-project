@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="finally added desk change">
+    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="added delete button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/Edit/Edit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/Edit/Edit.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +123,7 @@
       <workItem from="1758192246790" duration="11296000" />
       <workItem from="1758258535058" duration="20171000" />
       <workItem from="1758517731591" duration="10466000" />
-      <workItem from="1758605335185" duration="21439000" />
+      <workItem from="1758605335185" duration="23002000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -320,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758630881492</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added delete button">
+      <option name="closed" value="true" />
+      <created>1758633555550</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1758633555550</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +360,7 @@
     <MESSAGE value="added create and change buttons, added mock components for creation desks and tasks" />
     <MESSAGE value="added createDesk and CreateTask component without data" />
     <MESSAGE value="finally added desk change" />
-    <option name="LAST_COMMIT_MESSAGE" value="finally added desk change" />
+    <MESSAGE value="added delete button" />
+    <option name="LAST_COMMIT_MESSAGE" value="added delete button" />
   </component>
 </project>

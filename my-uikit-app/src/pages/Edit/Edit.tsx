@@ -1,5 +1,5 @@
 import { Form, Container, Alert } from "react-bootstrap";
-import classes from "../LoginPage/LoginPage.module.scss";
+import classes from './Edit.module.scss'
 import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -103,16 +103,16 @@ export const Edit = () => {
         <>
             <NavLinks />
             <Container>
-                <Form onSubmit={handleSubmit} className={classes.LoginPageForm}>
+                <Form onSubmit={handleSubmit} className={classes.EditPageForm}>
                     <Form.Text><h1>Изменить доску</h1></Form.Text>
 
                     {error && <Alert variant="danger">{error}</Alert>}
                     {success && <Alert variant="success">{success}</Alert>}
 
-                    <Form.Group className={classes.LoginPageFormGroup}>
-                        <Form.Label className={classes.LoginPageLabel}>Название</Form.Label>
+                    <Form.Group className={classes.EditPageForm}>
+                        <Form.Label className={classes.EditPageLabel}>Название</Form.Label>
                         <Form.Control
-                            className={classes.LoginPageControl}
+                            className={classes.EditPageControl}
                             type="text"
                             placeholder="Изменить название доски"
                             value={deskNameCh}
@@ -120,10 +120,10 @@ export const Edit = () => {
                             required
                         />
                     </Form.Group>
-                    <Form.Group className={classes.LoginPageFormGroup}>
-                        <Form.Label className={classes.LoginPageLabel}>Описание</Form.Label>
+                    <Form.Group className={classes.EditPageForm}>
+                        <Form.Label className={classes.EditPageLabel}>Описание</Form.Label>
                         <Form.Control
-                            className={classes.LoginPageControl}
+                            className={classes.EditPageControl}
                             as="textarea"
                             rows={3}
                             placeholder="Изменить описание доски"
@@ -132,7 +132,7 @@ export const Edit = () => {
                             required
                         />
                     </Form.Group>
-                    <Button className={classes.LoginPageButton} variant="primary" type="submit">
+                    <Button className={classes.EditPageButton} variant="primary" type="submit">
                         Сохранить изменения
                     </Button>
                 </Form>
