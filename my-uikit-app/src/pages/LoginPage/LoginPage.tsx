@@ -7,7 +7,6 @@ export const LoginPage = () => {
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
     const [rememberMe, setRememberMe] = useState(false)
-    const [error, setError] = useState('')
     const [isLoading, setIsLoading] = useState(false)
     const navigate = useNavigate()
 
@@ -37,11 +36,9 @@ export const LoginPage = () => {
                 navigate('/')
             } else {
                 localStorage.removeItem('rememberedUser')
-                setError('Сохраненные данные устарели. Войдите снова.')
             }
         } catch (error) {
-            console.error('Error:', error)
-            setError('Ошибка подключения к серверу')
+            console.error('Ошибка', error)
         } finally {
             setIsLoading(false)
         }
@@ -50,7 +47,6 @@ export const LoginPage = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         setIsLoading(true)
-        setError('')
         try {
             const response = await fetch('http://localhost:3000/users')
             if (!response.ok) {
@@ -72,11 +68,10 @@ export const LoginPage = () => {
                 }
                 navigate('/')
             } else {
-                setError('Неверный логин или пароль')
+                console.log('Неверный логин или пароль')
             }
         } catch (error) {
             console.error('Error:', error)
-            setError('Ошибка подключения к серверу')
         } finally {
             setIsLoading(false)
         }
@@ -96,7 +91,6 @@ export const LoginPage = () => {
     return (
         <div className={classes.LoginPage}>
         <Form onSubmit={handleSubmit} className={classes.LoginPageForm}>
-            {error && <div className="alert alert-danger">{error}</div>}
             <Form.Group className={classes.LoginPageForm} controlId="formBasicEmail">
                 <Form.Text><h1>Авторизация</h1></Form.Text>
                 <Form.Label className={classes.LoginPageLabel}>Логин</Form.Label>

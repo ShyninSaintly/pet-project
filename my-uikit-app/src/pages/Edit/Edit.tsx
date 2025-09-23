@@ -20,13 +20,12 @@ export const Edit = () => {
     const [deskNameCh, setDeskCh] = useState("");
     const [deskDescriptionCh, setDeskDescriptionCh] = useState("");
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
     useEffect(() => {
         const fetchDeskData = async () => {
             if (!deskId) {
-                setError("ID доски не указан");
+                console.log("ID доски не указан");
                 setLoading(false);
                 return;
             }
@@ -40,10 +39,8 @@ export const Edit = () => {
 
                 setDeskCh(deskData.title);
                 setDeskDescriptionCh(deskData.description);
-                setError("");
             } catch (err) {
                 console.error('Ошибка загрузки данных доски:', err);
-                setError("Не удалось загрузить данные доски");
             } finally {
                 setLoading(false);
             }
@@ -56,7 +53,6 @@ export const Edit = () => {
         e.preventDefault();
 
         if (!deskId) {
-            setError("ID доски не указан");
             return;
         }
 
@@ -76,14 +72,10 @@ export const Edit = () => {
                 throw new Error(`Ошибка HTTP: ${response.status}`);
             }
             setSuccess("Доска успешно обновлена!");
-            setError("");
-            setTimeout(() => {
-                navigate("/");
-            }, 2000);
+            navigate("/");
 
         } catch (err) {
             console.error('Ошибка при обновлении данных:', err);
-            setError("Ошибка при обновлении доски");
             setSuccess("");
         }
     };
@@ -105,8 +97,6 @@ export const Edit = () => {
             <Container>
                 <Form onSubmit={handleSubmit} className={classes.EditPageForm}>
                     <Form.Text><h1>Изменить доску</h1></Form.Text>
-
-                    {error && <Alert variant="danger">{error}</Alert>}
                     {success && <Alert variant="success">{success}</Alert>}
 
                     <Form.Group className={classes.EditPageForm}>

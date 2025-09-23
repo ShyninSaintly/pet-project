@@ -14,13 +14,11 @@ interface DeskData {
 export const CreateDesk = () => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const handleDiscard = () => {
        navigate('/');
     };
-
 
     const generateId = () => {
         return 'desk' + Date.now();
@@ -41,7 +39,6 @@ export const CreateDesk = () => {
 
     const handleCreate = async () => {
         if (!title.trim() || !description.trim()) {
-            setError('Название и описание обязательны для заполнения');
             return;
         }
         try {
@@ -60,13 +57,10 @@ export const CreateDesk = () => {
                 body: JSON.stringify(newDesk),
             });
             if (!response.ok) {
-                throw new Error(`Ошибка HTTP: ${response.status}`);
+                console.log('Ошибочка в создании доски')
             }
-
-
-        } catch (err) {
-            console.error('Ошибка при создании доски:', err);
-            setError('Ошибка при создании доски');
+        } catch{
+            console.error('Ошибка при создании доски:');
         }
         navigate('/');
     };

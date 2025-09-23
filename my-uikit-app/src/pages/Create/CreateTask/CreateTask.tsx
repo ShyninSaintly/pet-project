@@ -26,10 +26,8 @@ export const CreateTask = () => {
     const [selectedDeskId, setSelectedDeskId] = useState<string>('');
     const [desks, setDesks] = useState<Desk[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    // Загружаем список досок при монтировании компонента
     useEffect(() => {
         const fetchDesks = async () => {
             try {
@@ -39,14 +37,12 @@ export const CreateTask = () => {
                 }
                 const desksData = await response.json();
                 setDesks(desksData);
-            } catch (err) {
-                console.error('Ошибка загрузки досок:', err);
-                setError('Ошибка загрузки списка досок');
+            } catch (e) {
+                console.error('Ошибка загрузки досок');
             } finally {
                 setLoading(false);
             }
         };
-
         fetchDesks();
     }, []);
 
@@ -63,12 +59,12 @@ export const CreateTask = () => {
         e.preventDefault();
 
         if (!taskTitle.trim() || !taskDescription.trim()) {
-            setError('Название и описание задачи обязательны для заполнения');
+            console.log('Название и описание задачи обязательны для заполнения');
             return;
         }
 
         if (!selectedDeskId) {
-            setError('Необходимо выбрать доску');
+            console.log('Необходимо выбрать доску');
             return;
         }
 
@@ -92,16 +88,15 @@ export const CreateTask = () => {
             });
 
             if (!response.ok) {
-                throw new Error(`Ошибка HTTP: ${response.status}`);
+               console.log('Ошиюка в получении данных')
             }
 
             const result = await response.json();
             console.log('Задача успешно создана:', result);
             navigate('/');
 
-        } catch (err) {
-            console.error('Ошибка при создании задачи:', err);
-            setError('Ошибка при создании задачи');
+        } catch (e) {
+            console.error('Ошибка при создании задачи');
         }
     };
 
@@ -116,9 +111,6 @@ export const CreateTask = () => {
     return (
         <Form className={classes.CreateTask} onSubmit={handleSubmit}>
             <Form.Text><h2>Создание задачи</h2></Form.Text>
-
-            {error && <div className="alert alert-danger">{error}</div>}
-
             <Form.Group className="mb-3">
                 <Form.Label>Название задачи</Form.Label>
                 <Form.Control

@@ -126,12 +126,12 @@
       "dateOfCreation": "01.02.2024"
     },
     {
-      "id": "task1758661759050",
-      "deskId": null,
-      "title": "тестовая задачка прачка",
-      "description": "авыаываываываываыфв",
+      "id": "task1758667200044",
+      "deskId": "desk1758657844462",
+      "title": "Ghbrjk djn nfrjq",
+      "description": "Прикол смехотун",
       "author": "Admin",
-      "column": "testing",
+      "column": "todo",
       "dateOfCreation": "24.09.2025"
     }
   ],

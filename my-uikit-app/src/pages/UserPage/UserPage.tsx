@@ -1,4 +1,4 @@
-import { Container, Form, Image } from 'react-bootstrap'
+import { Container, Form } from 'react-bootstrap'
 import classes from './UserPage.module.scss'
 import Button from "react-bootstrap/Button";
 import {NavLinks} from "../../shared/ui/NavLinks/NavLinks.tsx";
@@ -15,6 +15,7 @@ export const UserPage = () => {
     const [loginCh, setLoginCh] = useState('');
     const [job, setJob] = useState('');
     const [passwordCh, setPasswordCh] = useState('');
+    // @ts-ignore
     const [userId, setUserId] = useState<number | null>(null);
     useEffect(() => {
         const userData = localStorage.getItem('rememberedUser');
@@ -82,7 +83,6 @@ export const UserPage = () => {
             <div className={classes.UserPage}>
                 <Form className={classes.UserPageFormItems} onSubmit={handleSubmit}>
                     <Form.Text><h1>Профиль</h1></Form.Text>
-                    <Image></Image>
                     <Form.Group className={classes.UserPageFormGroup}>
                         <Form.Label className={classes.UserPageLabel}>Логин</Form.Label>
                         <Form.Control

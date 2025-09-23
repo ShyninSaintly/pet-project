@@ -23,8 +23,6 @@ export const DeskPage = () => {
     const { deskId } = useParams<{ deskId: string }>()
     const [tasks, setTasks] = useState<Task[]>([])
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState<string | null>(null)
-
     useEffect(() => {
         const fetchTasks = async () => {
             try {
@@ -34,9 +32,8 @@ export const DeskPage = () => {
                 }
                 const tasksData = await response.json()
                 setTasks(tasksData)
-            } catch (err) {
-                setError('Не получилось загрузить задачи для этой доски')
-                console.error('Ошибка загрузки задач:', err)
+            } catch (e) {
+                console.error('Ошибка загрузки задач:', e)
             } finally {
                 setLoading(false)
             }
@@ -81,7 +78,6 @@ export const DeskPage = () => {
                 )
             )
         } catch (err) {
-            setError('Не удалось обновить задачу')
             console.error('Ошибка обновления задачи:', err)
         }
     }
@@ -90,14 +86,6 @@ export const DeskPage = () => {
         return (
             <Container fluid>
                 <p>Загрузка...</p>
-            </Container>
-        )
-    }
-
-    if (error) {
-        return (
-            <Container fluid>
-                <p>{error}</p>
             </Container>
         )
     }
