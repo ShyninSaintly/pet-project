@@ -2,8 +2,8 @@
   "desks": [
     {
       "id": "desk1",
-      "title": "Доска 1",
-      "description": "Описание доски 1",
+      "title": "Доска ИЗм",
+      "description": "Описание доски ИЗм",
       "author": "Admin",
       "dateOfCreation": "01.02.2024"
     },

@@ -19,7 +19,7 @@ function App() {
                     <Route path="/user" element={<UserPage />} />
                     <Route path='/createDesk' element={<CreateDesk/>}/>
                     <Route path='/createTask' element={<CreateTask/>}/>
-                    <Route path='/edit' element={<Edit/>}/>
+                    <Route path='/edit/:deskId' element={<Edit/>}/>
                 </Routes>
             </div>
         </Router>
