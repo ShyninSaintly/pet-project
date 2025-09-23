@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { useNavigate } from 'react-router-dom'
@@ -29,15 +28,14 @@ export const NavLinks = () => {
 
     return (
         <Navbar expand="lg" className={classes.NavLinks}>
-            <Container>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className={classes.NavLinksNav}>
-                        <Nav.Link href="/">Главная</Nav.Link>
-                        <Nav.Link href="/dashboard">Доска задач</Nav.Link>
-                        <Nav.Link href="/createDesk">Создать доску</Nav.Link>
-                        <Nav.Link href="/createTask">Создать задачу</Nav.Link>
-                        <Nav.Link href="/user">Профиль</Nav.Link>
-                        <Nav.Link
+                        <Nav.Link className={classes.NavLinksItem} href="/">Главная</Nav.Link>
+                        <Nav.Link className={classes.NavLinksItem} href="/dashboard">Доска задач</Nav.Link>
+                        <Nav.Link className={classes.NavLinksItem} href="/createDesk">Создать доску</Nav.Link>
+                        <Nav.Link className={classes.NavLinksItem} href="/createTask">Создать задачу</Nav.Link>
+                        <Nav.Link className={classes.NavLinksItem} href="/user">Профиль</Nav.Link>
+                        <Nav.Link className={classes.NavLinksItem}
                             href="/login"
                             onClick={handleLogout}
                             style={{ cursor: 'pointer' }}
@@ -46,7 +44,6 @@ export const NavLinks = () => {
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-            </Container>
         </Navbar>
     )
 }
