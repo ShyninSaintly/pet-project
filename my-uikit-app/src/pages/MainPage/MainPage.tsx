@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-import {Alert,Card,Container} from 'react-bootstrap'
+import {Container} from 'react-bootstrap'
 import { NavLinks } from "../../shared/ui/NavLinks/NavLinks.tsx";
-//import { Task } from "../../shared/ui/Task/Task.tsx";
-import { Link } from "react-router-dom";
 import {Task} from "../../shared/ui/Task/Task.tsx";
 
 interface DeskType {

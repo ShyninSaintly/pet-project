@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="reformated Table render">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/UserPage/UserPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +55,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\pet-proj\my-uikit-app\src\pages\Create\CreateDesk" />
       <recent name="C:\projects\pet-proj\my-uikit-app\src\shared\ui\dragAndDrop\Draggable" />
       <recent name="C:\projects\pet-proj\my-uikit-app\src\pages\LoginPage" />
     </key>
@@ -121,6 +127,7 @@
       <workItem from="1758192246790" duration="11296000" />
       <workItem from="1758258535058" duration="20171000" />
       <workItem from="1758517731591" duration="10466000" />
+      <workItem from="1758605335185" duration="8404000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
