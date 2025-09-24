@@ -51,8 +51,16 @@ export const CreateTask = () => {
     };
 
     const getCurrentUser = () => {
-        const user = sessionStorage.getItem('currentUser');
-        return user || 'Anonymous';
+        const userStr = sessionStorage.getItem('currentUser');
+        if (userStr) {
+            try {
+                const user = JSON.parse(userStr);
+                return user.login || 'Anonymous';
+            } catch (error) {
+                return userStr;
+            }
+        }
+        return 'Anonymous';
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -100,65 +108,66 @@ export const CreateTask = () => {
     return (
         loading? (
             <div>Загрузка...</div>
-            ):(< Form className={classes.CreateTask} onSubmit={handleSubmit}>
-            <Form.Text><h2>Создание задачи</h2></Form.Text>
-            <Form.Group className="mb-3">
-                <Form.Label>Название задачи</Form.Label>
-                <Form.Control
-                    className={classes.CreateTaskControl}
-                    type="text"
-                    placeholder="Введите название задачи"
-                    value={taskTitle}
-                    onChange={(e) => setTaskTitle(e.target.value)}
-                    required
-                />
-            </Form.Group>
+        ):(< Form className={classes.CreateTask} onSubmit={handleSubmit}>
+                <Form.Text><h2>Создание задачи</h2></Form.Text>
+                <Form.Group className="mb-3">
+                    <Form.Label>Название задачи</Form.Label>
+                    <Form.Control
+                        className={classes.CreateTaskControl}
+                        type="text"
+                        placeholder="Введите название задачи"
+                        value={taskTitle}
+                        onChange={(e) => setTaskTitle(e.target.value)}
+                        required
+                    />
+                </Form.Group>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Описание задачи</Form.Label>
-                <Form.Control
-                    className={classes.CreateTaskControl}
-                    type="text"
-                    placeholder="Введите описание задачи"
-                    value={taskDescription}
-                    onChange={(e) => setTaskDescription(e.target.value)}
-                    required
-                />
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Описание задачи</Form.Label>
+                    <Form.Control
+                        className={classes.CreateTaskControl}
+                        type="text"
+                        placeholder="Введите описание задачи"
+                        value={taskDescription}
+                        onChange={(e) => setTaskDescription(e.target.value)}
+                        required
+                    />
+                </Form.Group>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Выберите доску</Form.Label>
-                <Form.Select
-                    className={classes.CreateTaskSelect}
-                    value={selectedDeskId}
-                    onChange={(e) => setSelectedDeskId(e.target.value)}
-                    required
-                >
-                    {desks.map(desk => (
-                        <option key={desk.id} value={desk.id}>
-                            {desk.title}
-                        </option>
-                    ))}
-                </Form.Select>
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Выберите доску</Form.Label>
+                    <Form.Select
+                        className={classes.CreateTaskSelect}
+                        value={selectedDeskId}
+                        onChange={(e) => setSelectedDeskId(e.target.value)}
+                        required
+                    >
+                        <option value="">Выберите доску</option>
+                        {desks.map(desk => (
+                            <option key={desk.id} value={desk.id}>
+                                {desk.title}
+                            </option>
+                        ))}
+                    </Form.Select>
+                </Form.Group>
 
-            <Form.Group className="mb-3" style={{ marginTop: '30px' }}>
-                <Button
-                    className={classes.CreateTaskButton}
-                    variant="secondary"
-                    onClick={handleCancel}
-                >
-                    Отмена
-                </Button>
-                <Button style={{ marginLeft: '30px' }}
-                    className={classes.CreateTaskButton}
-                    variant="primary"
-                    type="submit"
-                >
-                    Создать
-                </Button>
-            </Form.Group>
-        </Form>
+                <Form.Group className="mb-3" style={{ marginTop: '30px' }}>
+                    <Button
+                        className={classes.CreateTaskButton}
+                        variant="secondary"
+                        onClick={handleCancel}
+                    >
+                        Отмена
+                    </Button>
+                    <Button style={{ marginLeft: '30px' }}
+                            className={classes.CreateTaskButton}
+                            variant="primary"
+                            type="submit"
+                    >
+                        Создать
+                    </Button>
+                </Form.Group>
+            </Form>
         )
     );
 };

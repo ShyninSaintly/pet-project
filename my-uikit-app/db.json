@@ -1,13 +1,6 @@
 {
   "desks": [
     {
-      "id": "desk1",
-      "title": "Доска ИЗм",
-      "description": "Описание доски ИЗ",
-      "author": "Admin",
-      "dateOfCreation": "01.02.2024"
-    },
-    {
       "id": "desk2",
       "title": "Доска 2 Изм",
       "description": "Описание доски 2 Изм",
@@ -29,46 +22,49 @@
       "dateOfCreation": "01.12.2024"
     },
     {
-      "id": "desk1758657271598",
-      "title": "вывывы",
-      "description": "вывы",
+      "id": "desk1758708630493",
+      "title": "бек мек баля",
+      "description": "бек мек баля",
       "author": "Admin",
-      "dateOfCreation": "23.09.2025"
+      "dateOfCreation": "24.09.2025"
     },
     {
-      "id": "desk1758657844462",
-      "title": "вывы",
-      "description": "вывы",
+      "id": "desk1758708698474",
+      "title": "Тастовая доска хз какая уже блять",
+      "description": "АААААААААААААААААААА бляяяяяяяяя",
       "author": "Admin",
-      "dateOfCreation": "23.09.2025"
+      "dateOfCreation": "24.09.2025"
+    },
+    {
+      "id": "desk1758709049203",
+      "title": "Я щас с ума сойду",
+      "description": "Описание ",
+      "author": "Admin",
+      "dateOfCreation": "24.09.2025"
+    },
+    {
+      "id": "desk1758709090103",
+      "title": "Мда уж ",
+      "description": "Мда уж x2",
+      "author": "Admin",
+      "dateOfCreation": "24.09.2025"
+    },
+    {
+      "id": "desk1758709966501",
+      "title": "куцкуцк",
+      "description": "куцкуцк",
+      "author": "Admin",
+      "dateOfCreation": "24.09.2025"
     }
   ],
   "tasks": [
     {
-      "id": "1",
-      "deskId": "desk1",
-      "title": "Задача 1",
-      "description": "Описание задачи 1",
-      "author": "Admin",
-      "column": "todo",
-      "dateOfCreation": "01.02.2024"
-    },
-    {
-      "id": "2",
-      "deskId": "desk1",
-      "title": "Задача 2",
-      "description": "Описание задачи 2",
-      "author": "Admin",
-      "column": "done",
-      "dateOfCreation": "02.02.2024"
-    },
-    {
       "id": "3",
-      "deskId": null,
+      "deskId": "desk2",
       "title": "Задача 3",
       "description": "Описание задачи 3",
       "author": "Admin",
-      "column": "todo",
+      "column": "testing",
       "dateOfCreation": "01.12.2024"
     },
     {
@@ -104,7 +100,7 @@
       "title": "Задача 7",
       "description": "Описание задачи 7",
       "author": "User",
-      "column": "inProgress",
+      "column": "todo",
       "dateOfCreation": "01.02.2024"
     },
     {
@@ -126,10 +122,37 @@
       "dateOfCreation": "01.02.2024"
     },
     {
-      "id": "task1758667200044",
-      "deskId": "desk1758657844462",
-      "title": "Ghbrjk djn nfrjq",
-      "description": "Прикол смехотун",
+      "id": "task1758709547769",
+      "deskId": "desk1758708630493",
+      "title": "fdsfsdfsdfds",
+      "description": "fsdfsdfdsf",
+      "author": "Admin",
+      "column": "todo",
+      "dateOfCreation": "24.09.2025"
+    },
+    {
+      "id": "task1758709983590",
+      "deskId": "desk1758709966501",
+      "title": "цуцуц",
+      "description": "уцуцф",
+      "author": "Admin",
+      "column": "done",
+      "dateOfCreation": "24.09.2025"
+    },
+    {
+      "id": "task1758714665192",
+      "deskId": "desk1758708630493",
+      "title": "fdsfsdf",
+      "description": "fdsfsd",
+      "author": "{\"id\":\"192c\",\"login\":\"Admin\",\"job\":\"Администратор\",\"password\":\"wdadas\"}",
+      "column": "inProgress",
+      "dateOfCreation": "24.09.2025"
+    },
+    {
+      "id": "task1758715083017",
+      "deskId": "desk1758709049203",
+      "title": "вфвф",
+      "description": "вфв",
       "author": "Admin",
       "column": "todo",
       "dateOfCreation": "24.09.2025"
@@ -140,7 +163,8 @@
       "userName": "Admin",
       "job": "Администратор",
       "password": "test",
-      "id": "192c"
+      "id": "192c",
+      "login": "Admin"
     },
     {
       "userName": "User",

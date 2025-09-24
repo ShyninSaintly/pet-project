@@ -11,14 +11,32 @@ interface DeskType {
     dateOfCreation: string;
 }
 
+interface UserType {
+    id: number;
+    login: string;
+    job: string;
+    password?: string;
+}
+
 export const MainPage = () => {
     const [desks, setDesks] = useState<DeskType[]>([]);
     const [loading, setLoading] = useState(true);
-    const [currentUser, setCurrentUser] = useState<string | null>(null);
+    const [currentUser, setCurrentUser] = useState<UserType | null>(null);
 
     useEffect(() => {
         const user = sessionStorage.getItem('currentUser');
-        setCurrentUser(user);
+        let userData: UserType | null = null;
+
+        if (user) {
+            try {
+                userData = JSON.parse(user);
+                setCurrentUser(userData);
+                console.log('Текущий пользователь:', userData);
+            } catch (error) {
+                console.error('Ошибка при парсинге пользователя:', error);
+                setCurrentUser({ id: 0, login: user, job: '' });
+            }
+        }
 
         const fetchDesks = async () => {
             try {
@@ -27,11 +45,12 @@ export const MainPage = () => {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const desksData = await response.json();
-                setDesks(desksData);
 
-                if (user) {
-                    const userDesks = desksData.filter((desk: DeskType) => desk.author === user);
+                if (userData && userData.login) {
+                    const userDesks = desksData.filter((desk: DeskType) => desk.author === userData!.login);
                     setDesks(userDesks);
+                } else {
+                    setDesks(desksData);
                 }
             } catch (err) {
                 console.error('Ошибка загрузки досок:', err);
@@ -43,20 +62,19 @@ export const MainPage = () => {
         fetchDesks();
     }, []);
 
-
     return (
         <>
             <NavLinks />
             <Container style={{ paddingTop: '2rem' }}>
-            {loading? (
+                {loading ? (
                     <>
-                            <h1>Главная</h1>
-                            <p>Загрузка...</p>
-                    </>
-                ):(
-                <>
                         <h1>Главная</h1>
-                        <h2>Доски пользователя: {currentUser}</h2>
+                        <p>Загрузка...</p>
+                    </>
+                ) : (
+                    <>
+                        <h1>Главная</h1>
+                        <h2>Доски пользователя: {currentUser?.login || 'Неавторизованный пользователь'}</h2>
                         <ul style={{ listStyleType: 'none' }}>
                             {desks.length > 0 ? (
                                 desks.map(desk => (
@@ -66,9 +84,9 @@ export const MainPage = () => {
                                 <p>Нет доступных досок</p>
                             )}
                         </ul>
-
-                </>
+                    </>
                 )}
             </Container>
-        </>)
+        </>
+    );
 };

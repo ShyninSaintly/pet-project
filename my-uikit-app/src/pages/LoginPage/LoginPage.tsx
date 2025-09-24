@@ -13,11 +13,16 @@ export const LoginPage = () => {
     useEffect(() => {
         const rememberedUser = localStorage.getItem('rememberedUser')
         if (rememberedUser) {
-            const userData = JSON.parse(rememberedUser)
-            setLogin(userData.login)
-            setPassword(userData.password)
-            setRememberMe(true)
-            handleAutoLogin(userData.login, userData.password)
+            try {
+                const userData = JSON.parse(rememberedUser)
+                setLogin(userData.login)
+                setPassword(userData.password)
+                setRememberMe(true)
+                handleAutoLogin(userData.login, userData.password)
+            } catch (error) {
+                console.error('Ошибка при парсинге rememberedUser:', error)
+                localStorage.removeItem('rememberedUser')
+            }
         }
     }, [])
 
@@ -32,13 +37,18 @@ export const LoginPage = () => {
             const user = users.find((u: any) => u.userName === savedLogin)
 
             if (user && user.password === savedPassword) {
-                sessionStorage.setItem('currentUser', savedLogin)
+                sessionStorage.setItem('currentUser', JSON.stringify({
+                    id: user.id,
+                    login: user.userName,
+                    job: user.job || '',
+                    password: user.password
+                }))
                 navigate('/')
             } else {
                 localStorage.removeItem('rememberedUser')
             }
         } catch (error) {
-            console.error('Ошибка', error)
+            console.error('Ошибка автовхода', error)
         } finally {
             setIsLoading(false)
         }
@@ -56,12 +66,18 @@ export const LoginPage = () => {
             const user = users.find((u: any) => u.userName === login)
 
             if (user && user.password === password) {
-                sessionStorage.setItem('currentUser', login)
+                const userData = {
+                    id: user.id,
+                    login: user.userName,
+                    job: user.job || '',
+                    password: user.password
+                }
+                sessionStorage.setItem('currentUser', JSON.stringify(userData))
 
                 if (rememberMe) {
                     localStorage.setItem(
                         'rememberedUser',
-                        JSON.stringify({ login, password })
+                        JSON.stringify(userData)
                     )
                 } else {
                     localStorage.removeItem('rememberedUser')
@@ -72,6 +88,7 @@ export const LoginPage = () => {
             }
         } catch (error) {
             console.error('Error:', error)
+            console.log('Произошла ошибка при авторизации')
         } finally {
             setIsLoading(false)
         }
@@ -90,43 +107,43 @@ export const LoginPage = () => {
 
     return (
         <div className={classes.LoginPage}>
-        <Form onSubmit={handleSubmit} className={classes.LoginPageForm}>
-            <Form.Group className={classes.LoginPageForm} controlId="formBasicEmail">
-                <Form.Text><h1>Авторизация</h1></Form.Text>
-                <Form.Label className={classes.LoginPageLabel}>Логин</Form.Label>
-                <Form.Control
-                    className={classes.LoginPageControl}
-                    type="text"
-                    placeholder="Логин"
-                    value={login}
-                    onChange={(e) => setLogin(e.target.value)}
-                    required
-                />
-            </Form.Group>
-            <Form.Group className={classes.LoginPageForm} controlId="formBasicPassword">
-                <Form.Label className={classes.LoginPageLabel}>Пароль</Form.Label>
-                <Form.Control
-                    className={classes.LoginPageControl}
-                    type="password"
-                    placeholder="Пароль"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </Form.Group>
+            <Form onSubmit={handleSubmit} className={classes.LoginPageForm}>
+                <Form.Group className={classes.LoginPageForm} controlId="login">
+                    <Form.Text><h1>Авторизация</h1></Form.Text>
+                    <Form.Label className={classes.LoginPageLabel}>Логин</Form.Label>
+                    <Form.Control
+                        className={classes.LoginPageControl}
+                        type="text"
+                        placeholder="Логин"
+                        value={login}
+                        onChange={(e) => setLogin(e.target.value)}
+                        required
+                    />
+                </Form.Group>
+                <Form.Group className={classes.LoginPageForm} controlId="pass">
+                    <Form.Label className={classes.LoginPageLabel}>Пароль</Form.Label>
+                    <Form.Control
+                        className={classes.LoginPageControl}
+                        type="password"
+                        placeholder="Пароль"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </Form.Group>
 
-            <Form.Group className={classes.LoginPageForm} controlId="formBasicCheckbox">
-                <Form.Check
-                    type="checkbox"
-                    label="Запомнить меня?"
-                    checked={rememberMe}
-                    onChange={handleRememberMe}
-                />
-            </Form.Group>
-            <Button className={classes.LoginPageButton} variant="primary" type="submit">
-                Войти
-            </Button>
-        </Form>
+                <Form.Group className={classes.LoginPageForm} controlId="rememberMe">
+                    <Form.Check
+                        type="checkbox"
+                        label="Запомнить меня?"
+                        checked={rememberMe}
+                        onChange={handleRememberMe}
+                    />
+                </Form.Group>
+                <Button className={classes.LoginPageButton} variant="primary" type="submit">
+                    Войти
+                </Button>
+            </Form>
         </div>
-    );
+    )
 }
