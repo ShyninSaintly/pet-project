@@ -12,7 +12,7 @@ interface Desk {
 
 interface TaskData {
     id: string;
-    deskId: string | null;
+    deskId: string;
     title: string;
     description: string;
     author: string;
@@ -57,17 +57,14 @@ export const CreateTask = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
         if (!taskTitle.trim() || !taskDescription.trim()) {
             console.log('Название и описание задачи обязательны для заполнения');
             return;
         }
-
         if (!selectedDeskId) {
             console.log('Необходимо выбрать доску');
             return;
         }
-
         try {
             const newTask: TaskData = {
                 id: generateId(),
@@ -78,7 +75,6 @@ export const CreateTask = () => {
                 column: 'todo',
                 dateOfCreation: getCurrentDate(),
             };
-
             const response = await fetch('http://localhost:3000/tasks', {
                 method: 'POST',
                 headers: {
@@ -86,34 +82,30 @@ export const CreateTask = () => {
                 },
                 body: JSON.stringify(newTask),
             });
-
             if (!response.ok) {
                console.log('Ошиюка в получении данных')
             }
-
             const result = await response.json();
             console.log('Задача успешно создана:', result);
             navigate('/');
-
         } catch (e) {
             console.error('Ошибка при создании задачи');
         }
     };
-
     const handleCancel = () => {
         navigate('/');
     };
 
-    if (loading) {
-        return <div>Загрузка...</div>;
-    }
 
     return (
-        <Form className={classes.CreateTask} onSubmit={handleSubmit}>
+        loading? (
+            <div>Загрузка...</div>
+            ):(< Form className={classes.CreateTask} onSubmit={handleSubmit}>
             <Form.Text><h2>Создание задачи</h2></Form.Text>
             <Form.Group className="mb-3">
                 <Form.Label>Название задачи</Form.Label>
                 <Form.Control
+                    className={classes.CreateTaskControl}
                     type="text"
                     placeholder="Введите название задачи"
                     value={taskTitle}
@@ -125,8 +117,8 @@ export const CreateTask = () => {
             <Form.Group className="mb-3">
                 <Form.Label>Описание задачи</Form.Label>
                 <Form.Control
-                    as="textarea"
-                    rows={3}
+                    className={classes.CreateTaskControl}
+                    type="text"
                     placeholder="Введите описание задачи"
                     value={taskDescription}
                     onChange={(e) => setTaskDescription(e.target.value)}
@@ -137,6 +129,7 @@ export const CreateTask = () => {
             <Form.Group className="mb-3">
                 <Form.Label>Выберите доску</Form.Label>
                 <Form.Select
+                    className={classes.CreateTaskSelect}
                     value={selectedDeskId}
                     onChange={(e) => setSelectedDeskId(e.target.value)}
                     required
@@ -149,7 +142,7 @@ export const CreateTask = () => {
                 </Form.Select>
             </Form.Group>
 
-            <Form.Group className="mb-3">
+            <Form.Group className="mb-3" style={{ marginTop: '30px' }}>
                 <Button
                     className={classes.CreateTaskButton}
                     variant="secondary"
@@ -157,7 +150,7 @@ export const CreateTask = () => {
                 >
                     Отмена
                 </Button>
-                <Button
+                <Button style={{ marginLeft: '30px' }}
                     className={classes.CreateTaskButton}
                     variant="primary"
                     type="submit"
@@ -166,5 +159,6 @@ export const CreateTask = () => {
                 </Button>
             </Form.Group>
         </Form>
+        )
     );
 };

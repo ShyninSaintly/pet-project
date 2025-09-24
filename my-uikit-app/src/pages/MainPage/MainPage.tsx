@@ -43,24 +43,19 @@ export const MainPage = () => {
         fetchDesks();
     }, []);
 
-    if (loading) {
-        return (
-            <>
-                <NavLinks />
-                <Container>
-                    <h1>Главная</h1>
-                    <p>Загрузка...</p>
-                </Container>
-            </>
-        );
-    }
 
     return (
         <>
             <NavLinks />
-            <Container>
-                <h1>Главная</h1>
+            <Container style={{ paddingTop: '2rem' }}>
+            {loading? (
                     <>
+                            <h1>Главная</h1>
+                            <p>Загрузка...</p>
+                    </>
+                ):(
+                <>
+                        <h1>Главная</h1>
                         <h2>Доски пользователя: {currentUser}</h2>
                         <ul style={{ listStyleType: 'none' }}>
                             {desks.length > 0 ? (
@@ -71,8 +66,9 @@ export const MainPage = () => {
                                 <p>Нет доступных досок</p>
                             )}
                         </ul>
-                    </>
+
+                </>
+                )}
             </Container>
-        </>
-    );
+        </>)
 };

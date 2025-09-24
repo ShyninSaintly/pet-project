@@ -125,7 +125,7 @@ export const DeskPage = () => {
                                                         <div>
                                                             <h5>{task.title}</h5>
                                                             <p>{task.description}</p>
-                                                            <small>Автор: {task.author}</small>
+                                                            <p>Автор: {task.author}</p>
                                                         </div>
                                                     </Draggable>
                                                 )

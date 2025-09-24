@@ -31,7 +31,6 @@ export const NavLinks = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className={classes.NavLinksNav}>
                         <Nav.Link className={classes.NavLinksItem} href="/">Главная</Nav.Link>
-                        <Nav.Link className={classes.NavLinksItem} href="/dashboard">Доска задач</Nav.Link>
                         <Nav.Link className={classes.NavLinksItem} href="/createDesk">Создать доску</Nav.Link>
                         <Nav.Link className={classes.NavLinksItem} href="/createTask">Создать задачу</Nav.Link>
                         <Nav.Link className={classes.NavLinksItem} href="/user">Профиль</Nav.Link>

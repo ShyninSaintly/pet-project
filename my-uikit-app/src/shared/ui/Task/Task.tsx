@@ -57,7 +57,7 @@ export const Task = ({ data }: TaskProps) => {
                 <Link to={`/edit/${data.id}`}>
                     <Card.Img src={'src/assets/change.png'} width={'40px'} alt="Редактировать"/>
                 </Link>
-                <Button onClick={handleShow}>
+                <Button onClick={handleShow} style={{ marginLeft: '20px' }} className={classes.ModalDeleteButton} >
                     <Card.Img src={'src/assets/delete.png'} width={'40px'} alt="Удалить"/>
                 </Button>
             </Card>

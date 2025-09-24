@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
-import classes from './CreateDesk.module.scss';
+import classes from '../CreateTask/CreateTask.module.scss';
 interface DeskData {
     id: string;
     title: string;
@@ -16,7 +16,7 @@ export const CreateDesk = () => {
     const [description, setDescription] = useState('');
     const navigate = useNavigate();
 
-    const handleDiscard = () => {
+    const handleCancel = () => {
        navigate('/');
     };
 
@@ -25,27 +25,28 @@ export const CreateDesk = () => {
     };
 
     const getCurrentDate = () => {
-        const now = new Date();
-        const day = String(now.getDate()).padStart(2, '0');
-        const month = String(now.getMonth() + 1).padStart(2, '0');
-        const year = now.getFullYear();
+        const dateForID = new Date();
+        const day = String(dateForID.getDate()).padStart(2, '0');
+        const month = String(dateForID.getMonth() + 1).padStart(2, '0');
+        const year = dateForID.getFullYear();
         return `${day}.${month}.${year}`;
     };
 
     const getCurrentUser = () => {
         const user = sessionStorage.getItem('currentUser');
-        return user || 'Anonymous';
+        return user || 'UnknownUser';
     };
 
-    const handleCreate = async () => {
-        if (!title.trim() || !description.trim()) {
+    const handleCreate = async (e:React.FormEvent) => {
+        e.preventDefault();
+        if (!title || !description) {
             return;
         }
         try {
             const newDesk: DeskData = {
                 id: generateId(),
-                title: title.trim(),
-                description: description.trim(),
+                title: title,
+                description: description,
                 author: getCurrentUser(),
                 dateOfCreation: getCurrentDate(),
             };
@@ -56,21 +57,24 @@ export const CreateDesk = () => {
                 },
                 body: JSON.stringify(newDesk),
             });
+
             if (!response.ok) {
-                console.log('Ошибочка в создании доски')
+                console.log('Ошибочка в создании доски');
+                return;
             }
-        } catch{
-            console.error('Ошибка при создании доски:');
+            navigate('/');
+
+        } catch (error) {
+            console.error('Ошибка при создании доски:', error);
         }
-        navigate('/');
     };
 
     return (
-                    <Form className={classes.CreateDesk}>
+                    <Form onSubmit={handleCreate} className={classes.CreateTask}>
                         <Form.Text><h2>Создание доски</h2></Form.Text>
                         <Form.Group className="mb-3">
                             <Form.Label>Название доски</Form.Label>
-                            <Form.Control
+                            <Form.Control className={classes.CreateTaskControl}
                                 type="text"
                                 placeholder="Введите название доски"
                                 value={title}
@@ -79,9 +83,10 @@ export const CreateDesk = () => {
                             />
                         </Form.Group>
 
-                        <Form.Group className="mb-3">
+                        <Form.Group className="mb-3" style={{ marginTop: '15px' }}>
                             <Form.Label>Описание доски</Form.Label>
                             <Form.Control
+                                className={classes.CreateTaskControl}
                                 type="text"
                                 placeholder="Введите описание доски"
                                 value={description}
@@ -89,9 +94,9 @@ export const CreateDesk = () => {
                                 required
                             />
                         </Form.Group>
-                        <Form.Group className="mb-3">
-                            <Button variant="primary" type="submit" onClick={handleDiscard}>Отмена</Button>
-                            <Button variant="primary" type="submit" onClick={handleCreate}>Создать</Button>
+                        <Form.Group className="mb-3" style={{ marginTop: '30px' }}>
+                            <Button className={classes.CreateTaskButton} variant="primary" type="button" onClick={handleCancel}>Отмена</Button>
+                            <Button style={{ marginLeft: '30px' }} className={classes.CreateTaskButton} variant="primary" type="submit">Создать</Button>
                         </Form.Group>
                     </Form>
     );

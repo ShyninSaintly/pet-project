@@ -91,7 +91,7 @@ export const UserPage = () => {
                             placeholder="Изменить логин"
                             required
                             value={loginCh}
-                            defaultValue={''}
+                            defaultValue={currentUser}
                             onChange={(e) => setLoginCh(e.target.value)}
                         />
                     </Form.Group>

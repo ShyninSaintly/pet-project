@@ -1,6 +1,14 @@
 .CreateTask{
   background:#4f94ec;
-  padding:20px;
+  padding:30px;
+  border-radius:10px;
+  &Control{
+    height:30px;
+  }
+  &Select{
+    height:30px;
+    width:180px;
+  }
 &Button{
   width:100px;
   height:30px;

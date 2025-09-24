@@ -1,4 +1,4 @@
-import { Form, Container, Alert } from "react-bootstrap";
+import { Form, Container} from "react-bootstrap";
 import classes from './Edit.module.scss'
 import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
@@ -20,7 +20,6 @@ export const Edit = () => {
     const [deskNameCh, setDeskCh] = useState("");
     const [deskDescriptionCh, setDeskDescriptionCh] = useState("");
     const [loading, setLoading] = useState(true);
-    const [success, setSuccess] = useState("");
 
     useEffect(() => {
         const fetchDeskData = async () => {
@@ -71,12 +70,10 @@ export const Edit = () => {
             if (!response.ok) {
                 throw new Error(`Ошибка HTTP: ${response.status}`);
             }
-            setSuccess("Доска успешно обновлена!");
             navigate("/");
 
         } catch (err) {
             console.error('Ошибка при обновлении данных:', err);
-            setSuccess("");
         }
     };
 
@@ -97,7 +94,6 @@ export const Edit = () => {
             <Container>
                 <Form onSubmit={handleSubmit} className={classes.EditPageForm}>
                     <Form.Text><h1>Изменить доску</h1></Form.Text>
-                    {success && <Alert variant="success">{success}</Alert>}
 
                     <Form.Group className={classes.EditPageForm}>
                         <Form.Label className={classes.EditPageLabel}>Название</Form.Label>
