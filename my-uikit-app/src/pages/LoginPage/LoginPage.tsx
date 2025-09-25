@@ -131,7 +131,6 @@ export const LoginPage = () => {
                         required
                     />
                 </Form.Group>
-
                 <Form.Group className={classes.LoginPageForm} controlId="rememberMe">
                     <Form.Check
                         type="checkbox"

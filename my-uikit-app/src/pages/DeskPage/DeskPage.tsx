@@ -2,7 +2,7 @@ import Table from 'react-bootstrap/Table'
 import Container from 'react-bootstrap/Container'
 import classes from './DeskPage.module.scss'
 import { useState, useEffect } from 'react'
-import { DndContext } from '@dnd-kit/core'
+import {DndContext, type DragEndEvent} from '@dnd-kit/core'
 import { Draggable } from '../../shared/ui/dragAndDrop/Draggable/Draggable.tsx'
 import { Droppable } from '../../shared/ui/dragAndDrop/Droppable.tsx'
 import { useParams } from 'react-router-dom'
@@ -50,7 +50,7 @@ export const DeskPage = () => {
         done: tasks.filter(task => task.column === 'done'),
     }
 
-    const handleDragEnd = async (event: any) => {
+    const handleDragEnd = async (event: DragEndEvent) => {
         const { active, over } = event
 
         if (!over) return
@@ -104,37 +104,38 @@ export const DeskPage = () => {
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            {(
-                                [
-                                    'todo',
-                                    'inProgress',
-                                    'testing',
-                                    'done',
-                                ] as ColumnId[]
-                            ).map((columnId) => (
-                                <td key={columnId}>
-                                    <Droppable id={columnId}>
-                                        {items[columnId].length > 0
-                                            ? items[columnId].map(
-                                                (task) => (
-                                                    <Draggable
-                                                        key={task.id}
-                                                        id={task.id}
-                                                    >
-                                                        <div>
-                                                            <h5>{task.title}</h5>
-                                                            <p>{task.description}</p>
-                                                            <p>Автор: {task.author}</p>
-                                                        </div>
-                                                    </Draggable>
+                            <tr>
+                                {(
+                                    [
+                                        'todo',
+                                        'inProgress',
+                                        'testing',
+                                        'done',
+                                    ] as ColumnId[]
+                                ).map((columnId) => (
+                                    <td key={columnId}>
+                                        <Droppable id={columnId}>
+                                            {items[columnId].length > 0
+                                                ? items[columnId].map(
+                                                    (task) => (
+                                                        <Draggable
+                                                            key={task.id}
+                                                            id={task.id}
+                                                        >
+                                                            <div>
+                                                                <h5>{task.title}</h5>
+                                                                <p>{task.description}</p>
+                                                                <p>Автор: {task.author}</p>
+                                                            </div>
+                                                        </Draggable>
+                                                    )
                                                 )
-                                            )
-                                            : 'Перетащите задачу в это поле'}
-                                    </Droppable>
-                                </td>
-                            ))}
-                        </tr>
+                                                : 'Перетащите задачу в это поле'
+                                            }
+                                        </Droppable>
+                                    </td>
+                                ))}
+                            </tr>
                         </tbody>
                     </Table>
                 </DndContext>

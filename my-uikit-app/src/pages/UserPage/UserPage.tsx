@@ -1,4 +1,4 @@
-import { Container, Form } from 'react-bootstrap'
+import { Container, Form, Alert } from 'react-bootstrap'
 import classes from './UserPage.module.scss'
 import Button from "react-bootstrap/Button";
 import {NavLinks} from "../../shared/ui/NavLinks/NavLinks.tsx";
@@ -15,6 +15,8 @@ export const UserPage = () => {
     const [loginCh, setLoginCh] = useState('');
     const [job, setJob] = useState('');
     const [passwordCh, setPasswordCh] = useState('');
+    // @ts-ignore
+    const [show, setShow]=useState(true)
     const [userId, setUserId] = useState<number | null>(null);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -50,7 +52,6 @@ export const UserPage = () => {
 
             const currentUser: UserData = JSON.parse(currentUserData);
 
-            // Используем ID из состояния или из текущих данных
             const userIdToUpdate = userId || currentUser.id;
             console.log('ID для обновления:', userIdToUpdate);
 
@@ -80,7 +81,7 @@ export const UserPage = () => {
 
             if (!response.ok) {
                 const errorText = await response.text();
-                throw new Error(`Ошибка HTTP: ${response.status} - ${errorText}`);
+                <Alert onClose={()=>setShow(false)} variant="danger" dismissible> (`Ошибка HTTP: ${response.status}-${errorText}`)</Alert>
             }
 
             const result = await response.json();

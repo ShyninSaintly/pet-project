@@ -50,11 +50,9 @@ export const Edit = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
         if (!deskId) {
             return;
         }
-
         try {
             const response = await fetch(`http://localhost:3000/desks/${deskId}`, {
                 method: 'PATCH',
@@ -94,7 +92,6 @@ export const Edit = () => {
             <Container>
                 <Form onSubmit={handleSubmit} className={classes.EditPageForm}>
                     <Form.Text><h1>Изменить доску</h1></Form.Text>
-
                     <Form.Group className={classes.EditPageForm}>
                         <Form.Label className={classes.EditPageLabel}>Название</Form.Label>
                         <Form.Control

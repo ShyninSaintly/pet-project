@@ -36,13 +36,6 @@
       "dateOfCreation": "24.09.2025"
     },
     {
-      "id": "desk1758709049203",
-      "title": "Я щас с ума сойду",
-      "description": "Описание ",
-      "author": "Admin",
-      "dateOfCreation": "24.09.2025"
-    },
-    {
       "id": "desk1758709090103",
       "title": "Мда уж ",
       "description": "Мда уж x2",
@@ -54,6 +47,13 @@
       "title": "куцкуцк",
       "description": "куцкуцк",
       "author": "Admin",
+      "dateOfCreation": "24.09.2025"
+    },
+    {
+      "id": "desk1758715940784",
+      "title": "Тест Доска",
+      "description": "доска тестовая",
+      "author": "{\"id\":\"192c\",\"login\":\"Admin\",\"job\":\"Администратор\",\"password\":\"test\"}",
       "dateOfCreation": "24.09.2025"
     }
   ],
@@ -82,7 +82,7 @@
       "title": "Задача 5",
       "description": "Описание задачи 5",
       "author": "User",
-      "column": "done",
+      "column": "inProgress",
       "dateOfCreation": "01.02.2024"
     },
     {
@@ -91,7 +91,7 @@
       "title": "Задача 6",
       "description": "Описание задачи 6",
       "author": "User",
-      "column": "testing",
+      "column": "done",
       "dateOfCreation": "01.02.2024"
     },
     {
@@ -150,11 +150,20 @@
     },
     {
       "id": "task1758715083017",
-      "deskId": "desk1758709049203",
+      "deskId": null,
       "title": "вфвф",
       "description": "вфв",
       "author": "Admin",
       "column": "todo",
+      "dateOfCreation": "24.09.2025"
+    },
+    {
+      "id": "task1758716088914",
+      "deskId": "desk1758709966501",
+      "title": "Тестовая гадость",
+      "description": "тестовая гадость",
+      "author": "Admin",
+      "column": "done",
       "dateOfCreation": "24.09.2025"
     }
   ],
@@ -162,7 +171,7 @@
     {
       "userName": "Admin",
       "job": "Администратор",
-      "password": "test",
+      "password": "ded",
       "id": "192c",
       "login": "Admin"
     },
