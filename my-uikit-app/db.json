@@ -48,13 +48,6 @@
       "description": "куцкуцк",
       "author": "Admin",
       "dateOfCreation": "24.09.2025"
-    },
-    {
-      "id": "desk1758715940784",
-      "title": "Тест Доска",
-      "description": "доска тестовая",
-      "author": "{\"id\":\"192c\",\"login\":\"Admin\",\"job\":\"Администратор\",\"password\":\"test\"}",
-      "dateOfCreation": "24.09.2025"
     }
   ],
   "tasks": [
@@ -140,15 +133,6 @@
       "dateOfCreation": "24.09.2025"
     },
     {
-      "id": "task1758714665192",
-      "deskId": "desk1758708630493",
-      "title": "fdsfsdf",
-      "description": "fdsfsd",
-      "author": "{\"id\":\"192c\",\"login\":\"Admin\",\"job\":\"Администратор\",\"password\":\"wdadas\"}",
-      "column": "inProgress",
-      "dateOfCreation": "24.09.2025"
-    },
-    {
       "id": "task1758715083017",
       "deskId": null,
       "title": "вфвф",
@@ -179,7 +163,8 @@
       "userName": "User",
       "job": "Работник",
       "password": "testUser",
-      "id": "240e"
+      "id": "240e",
+      "login": "User"
     }
   ]
 }

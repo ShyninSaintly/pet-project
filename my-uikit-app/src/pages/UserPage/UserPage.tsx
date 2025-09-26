@@ -81,7 +81,16 @@ export const UserPage = () => {
 
             if (!response.ok) {
                 const errorText = await response.text();
-                <Alert onClose={()=>setShow(false)} variant="danger" dismissible> (`Ошибка HTTP: ${response.status}-${errorText}`)</Alert>
+                return (
+                <Alert variant="danger" dismissible>
+                    <Alert.Heading>
+                        (`Ошибка HTTP: ${response.status}-${errorText}`)
+                    </Alert.Heading>
+                    <Button onClick={()=> setShow(false)}>
+                        Закрыть
+                    </Button>
+                </Alert>
+                )
             }
 
             const result = await response.json();
