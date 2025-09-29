@@ -4,11 +4,12 @@ import Button from 'react-bootstrap/Button'
 import { useNavigate } from 'react-router-dom'
 import classes from './LoginPage.module.scss'
 export const LoginPage = () => {
-    const [login, setLogin] = useState('')
-    const [password, setPassword] = useState('')
-    const [rememberMe, setRememberMe] = useState(false)
-    const [isLoading, setIsLoading] = useState(false)
-    const navigate = useNavigate()
+    const [login, setLogin] = useState('');
+    const [password, setPassword] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+    const [rememberMe, setRememberMe] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const rememberedUser = localStorage.getItem('rememberedUser')
@@ -41,14 +42,14 @@ export const LoginPage = () => {
                     id: user.id,
                     login: user.userName,
                     job: user.job || '',
-                    password: user.password
+                    password: user.password,
                 }))
                 navigate('/')
             } else {
                 localStorage.removeItem('rememberedUser')
             }
         } catch (error) {
-            console.error('Ошибка автовхода', error)
+            console.error('Ошибка авто входа', error)
         } finally {
             setIsLoading(false)
         }
@@ -82,7 +83,7 @@ export const LoginPage = () => {
                 } else {
                     localStorage.removeItem('rememberedUser')
                 }
-                navigate('/')
+                navigate('/');
             } else {
                 console.log('Неверный логин или пароль')
             }

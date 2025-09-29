@@ -71,7 +71,9 @@ export const CreateDesk = () => {
 
     return (
                     <Form onSubmit={handleCreate} className={classes.CreateTask}>
-                        <Form.Text><h2>Создание доски</h2></Form.Text>
+                        <Form.Text>
+                            <h2>Создание доски</h2>
+                        </Form.Text>
                         <Form.Group className="mb-3">
                             <Form.Label>Название доски</Form.Label>
                             <Form.Control className={classes.CreateTaskControl}
@@ -84,7 +86,9 @@ export const CreateDesk = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3" style={{ marginTop: '15px' }}>
-                            <Form.Label>Описание доски</Form.Label>
+                            <Form.Label>
+                                Описание доски
+                            </Form.Label>
                             <Form.Control
                                 className={classes.CreateTaskControl}
                                 type="text"

@@ -13,18 +13,35 @@ import PrivateRoute from "./shared/PrivateRoute/PrivateRoute.tsx";
 function App() {
     const auth = useAuth();
     return (
-        <AuthProvider >
-        <Router>
-                <Routes>
-                    <Route path="/login" element={<LoginPage />} />
-                    <Route path="/" element={<PrivateRoute isAuthenticated={!!auth} component={<MainPage />}></PrivateRoute>}  />
-                    <Route path="/desk/:deskId" element={<PrivateRoute isAuthenticated={!!auth} component={<DeskPage />}></PrivateRoute>}  />
-                    <Route path="/user" element={<PrivateRoute isAuthenticated={!!auth} component={<UserPage />}></PrivateRoute>}  />
-                    <Route path='/createDesk' element={<PrivateRoute isAuthenticated={!!auth} component={<CreateDesk />}></PrivateRoute>} />
-                    <Route path='/createTask' element={<PrivateRoute isAuthenticated={!!auth} component={<CreateTask />}></PrivateRoute>} />
-                    <Route path='/edit/:deskId' element={<PrivateRoute isAuthenticated={!!auth} component={<Edit/>}></PrivateRoute>} />
-                </Routes>
-        </Router>
+        <AuthProvider isAllowed={auth} redirectTo={
+            <Routes>
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/" element={
+                    <PrivateRoute isAuthenticated={!!auth} component={<MainPage />}>
+                    </PrivateRoute>}
+                />
+                <Route path="/desk/:deskId" element={
+                    <PrivateRoute isAuthenticated={!!auth} component={<DeskPage />}>
+                    </PrivateRoute>}
+                />
+                <Route path="/user" element={
+                    <PrivateRoute isAuthenticated={!!auth} component={<UserPage />}>
+                    </PrivateRoute>}
+                />
+                <Route path='/createDesk' element={
+                    <PrivateRoute isAuthenticated={!!auth} component={<CreateDesk />}>
+                    </PrivateRoute>}
+                />
+                <Route path='/createTask' element={
+                    <PrivateRoute isAuthenticated={!!auth} component = {<CreateTask />}>
+                    </PrivateRoute>}
+                />
+                <Route path='/edit/:deskId' element={
+                    <PrivateRoute isAuthenticated={!!auth} component={<Edit/>}>
+                    </PrivateRoute>}
+                />
+            </Routes>
+        }>
         </AuthProvider>
     )
 }

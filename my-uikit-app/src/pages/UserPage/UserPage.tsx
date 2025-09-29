@@ -116,57 +116,57 @@ export const UserPage = () => {
     return (
         <Container>
             <NavLinks/>
-            <div className={classes.UserPage}>
-                <Form className={classes.UserPageFormItems} onSubmit={handleSubmit}>
-                    <Form.Text><h1>Профиль</h1></Form.Text>
-                    <Form.Group className={classes.UserPageFormGroup}>
-                        <Form.Label className={classes.UserPageLabel}>Логин</Form.Label>
-                        <Form.Control
-                            className={classes.UserPageControl}
-                            type="text"
-                            placeholder="Изменить логин"
-                            required
-                            value={loginCh}
-                            onChange={(e) => setLoginCh(e.target.value)}
-                            disabled={isLoading}
-                        />
-                    </Form.Group>
+                <div className={classes.UserPage}>
+                    <Form className={classes.UserPageFormItems} onSubmit={handleSubmit}>
+                        <Form.Text><h1>Профиль</h1></Form.Text>
+                        <Form.Group className={classes.UserPageFormGroup}>
+                            <Form.Label className={classes.UserPageLabel}>Логин</Form.Label>
+                            <Form.Control
+                                className={classes.UserPageControl}
+                                type="text"
+                                placeholder="Изменить логин"
+                                required
+                                value={loginCh}
+                                onChange={(e) => setLoginCh(e.target.value)}
+                                disabled={isLoading}
+                            />
+                        </Form.Group>
 
-                    <Form.Group className={classes.UserPageFormGroup}>
-                        <Form.Label className={classes.UserPageLabel}>Должность</Form.Label>
-                        <Form.Control
-                            className={classes.UserPageControl}
-                            type="text"
-                            placeholder="Изменить должность"
-                            required
-                            value={job}
-                            onChange={(e) => setJob(e.target.value)}
-                            disabled={isLoading}
-                        />
-                    </Form.Group>
+                        <Form.Group className={classes.UserPageFormGroup}>
+                            <Form.Label className={classes.UserPageLabel}>Должность</Form.Label>
+                            <Form.Control
+                                className={classes.UserPageControl}
+                                type="text"
+                                placeholder="Изменить должность"
+                                required
+                                value={job}
+                                onChange={(e) => setJob(e.target.value)}
+                                disabled={isLoading}
+                            />
+                        </Form.Group>
 
-                    <Form.Group className={classes.UserPageFormGroup}>
-                        <Form.Label className={classes.UserPageLabel}>Пароль</Form.Label>
-                        <Form.Control
-                            className={classes.UserPageControl}
-                            type="password"
-                            placeholder="Введите новый пароль"
-                            value={passwordCh}
-                            onChange={(e) => setPasswordCh(e.target.value)}
-                            disabled={isLoading}
-                        />
-                    </Form.Group>
+                        <Form.Group className={classes.UserPageFormGroup}>
+                            <Form.Label className={classes.UserPageLabel}>Пароль</Form.Label>
+                            <Form.Control
+                                className={classes.UserPageControl}
+                                type="password"
+                                placeholder="Введите новый пароль"
+                                value={passwordCh}
+                                onChange={(e) => setPasswordCh(e.target.value)}
+                                disabled={isLoading}
+                            />
+                        </Form.Group>
 
-                    <Button
-                        className={classes.UserPageButton}
-                        variant="primary"
-                        type="submit"
-                        disabled={isLoading}
-                    >
-                        {isLoading ? 'Сохранение...' : 'Сохранить'}
-                    </Button>
-                </Form>
-            </div>
+                        <Button
+                            className={classes.UserPageButton}
+                            variant="primary"
+                            type="submit"
+                            disabled={isLoading}
+                        >
+                            {isLoading ? 'Сохранение...' : 'Сохранить'}
+                        </Button>
+                    </Form>
+                </div>
         </Container>
     )
 }
