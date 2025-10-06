@@ -34,9 +34,11 @@ export const CreateDesk = () => {
 
     const getCurrentUser = () => {
         const user = sessionStorage.getItem('currentUser');
-        return user || 'UnknownUser';
+        // @ts-ignore
+        const someShit=JSON.parse(user);
+        return someShit.login || 'UnknownUser';
     };
-
+    console.log(getCurrentUser());
     const handleCreate = async (e:React.FormEvent) => {
         e.preventDefault();
         if (!title || !description) {

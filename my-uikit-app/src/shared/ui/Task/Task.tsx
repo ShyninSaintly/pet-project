@@ -25,7 +25,7 @@ export const Task = ({ data }: TaskProps) => {
             });
 
             if (!response.ok) {
-                throw new Error(`Ошибка HTTP: ${response.status}`);
+                new Error(`Ошибка HTTP: ${response.status}`);
             }
 
             console.log('Доска успешно удалена');

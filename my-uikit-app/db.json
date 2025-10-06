@@ -23,15 +23,15 @@
     },
     {
       "id": "desk1758708630493",
-      "title": "бек мек баля",
-      "description": "бек мек баля",
+      "title": "бек мек",
+      "description": "бек мек",
       "author": "Admin",
       "dateOfCreation": "24.09.2025"
     },
     {
       "id": "desk1758708698474",
-      "title": "Тастовая доска хз какая уже блять",
-      "description": "АААААААААААААААААААА бляяяяяяяяя",
+      "title": "Тастовая доска хз какая уже",
+      "description": "АААААААААААААААААААА",
       "author": "Admin",
       "dateOfCreation": "24.09.2025"
     },
@@ -48,6 +48,20 @@
       "description": "куцкуцк",
       "author": "Admin",
       "dateOfCreation": "24.09.2025"
+    },
+    {
+      "id": "desk1759749576170",
+      "title": "Доска ",
+      "description": "доска тест",
+      "author": "User",
+      "dateOfCreation": "06.10.2025"
+    },
+    {
+      "id": "desk1759749589399",
+      "title": "Доска 2ё",
+      "description": "ппвапвпв",
+      "author": "User",
+      "dateOfCreation": "06.10.2025"
     }
   ],
   "tasks": [
