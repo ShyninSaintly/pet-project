@@ -71,7 +71,6 @@ export const MainPage = () => {
                 setLoading(false);
             }
         };
-
         fetchDesks();
     }, []);
 
@@ -107,7 +106,6 @@ export const MainPage = () => {
                         <Button onClick={prevPage} className="page">
                             &larr;
                         </Button>
-                    {/* @ts-ignore */}
                     {[...Array(totalPages).keys()].map((el) => (
                         <Button
                             onClick={() => setPage(el + 1)}

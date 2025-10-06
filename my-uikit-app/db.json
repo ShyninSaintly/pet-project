@@ -107,7 +107,7 @@
       "title": "Задача 7",
       "description": "Описание задачи 7",
       "author": "User",
-      "column": "todo",
+      "column": "testing",
       "dateOfCreation": "01.02.2024"
     },
     {
@@ -152,7 +152,7 @@
       "title": "вфвф",
       "description": "вфв",
       "author": "Admin",
-      "column": "todo",
+      "column": "inProgress",
       "dateOfCreation": "24.09.2025"
     },
     {

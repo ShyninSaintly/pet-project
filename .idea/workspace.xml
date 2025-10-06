@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Private route??? valid??">
+    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Added pagination">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/Create/CreateDesk/CreateDesk.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/Create/CreateDesk/CreateDesk.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/ui/Task/Task.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +147,7 @@
       <workItem from="1759214310835" duration="8011000" />
       <workItem from="1759300943958" duration="10285000" />
       <workItem from="1759381832898" duration="23305000" />
-      <workItem from="1759730512459" duration="16049000" />
+      <workItem from="1759730512459" duration="21440000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -423,7 +421,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759738220038</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added pagination">
+      <option name="closed" value="true" />
+      <created>1759752819525</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1759752819525</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,6 +468,7 @@
     <MESSAGE value="added zustand, created wrong working isAuth checking" />
     <MESSAGE value="added auth router not working" />
     <MESSAGE value="Private route??? valid??" />
-    <option name="LAST_COMMIT_MESSAGE" value="Private route??? valid??" />
+    <MESSAGE value="Added pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pagination" />
   </component>
 </project>

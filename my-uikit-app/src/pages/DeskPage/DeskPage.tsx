@@ -122,11 +122,9 @@ export const DeskPage = () => {
                                                             key={task.id}
                                                             id={task.id}
                                                         >
-                                                            <div>
                                                                 <h5>{task.title}</h5>
                                                                 <p>{task.description}</p>
                                                                 <p>Автор: {task.author}</p>
-                                                            </div>
                                                         </Draggable>
                                                     )
                                                 )
