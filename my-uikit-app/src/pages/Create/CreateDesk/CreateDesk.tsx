@@ -84,7 +84,6 @@ export const CreateDesk = () => {
                                 required
                             />
                         </Form.Group>
-
                         <Form.Group className="mb-3" style={{ marginTop: '15px' }}>
                             <Form.Label>
                                 Описание доски

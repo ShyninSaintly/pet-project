@@ -6,7 +6,6 @@ import classes from './LoginPage.module.scss'
 export const LoginPage = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
     const [rememberMe, setRememberMe] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
