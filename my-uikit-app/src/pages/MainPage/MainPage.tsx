@@ -44,7 +44,6 @@ export const MainPage = () => {
             try {
                 userData = JSON.parse(user);
                 setCurrentUser(userData);
-                console.log('Текущий пользователь:', userData);
             } catch (error) {
                 console.error('Ошибка при парсинге пользователя:', error);
                 setCurrentUser({ id: 0, login: user, job: '' });

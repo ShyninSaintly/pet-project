@@ -6,7 +6,7 @@ import { MainPage } from './pages/MainPage/MainPage.tsx'
 import { UserPage } from './pages/UserPage/UserPage.tsx'
 import {CreateDesk} from "./pages/Create/CreateDesk/CreateDesk.tsx";
 import {CreateTask} from "./pages/Create/CreateTask/CreateTask.tsx";
-import {Edit} from "./pages/Edit/Edit.tsx";
+import {Edit} from "./widgets/Edit/Edit.tsx";
 
 
 function App() {
