@@ -54,7 +54,7 @@ export const MainPage = () => {
             try {
                 const response = await fetch('http://localhost:3000/desks');
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    new Error(`HTTP error! status: ${response.status}`);
                 }
                 const desksData = await response.json();
 
