@@ -4,7 +4,7 @@ import { NavLinks } from "../../shared/ui/NavLinks/NavLinks.tsx";
 import {Task} from "../../shared/ui/Task/Task.tsx";
 import {usePagination} from "../../shared/hooks/usePagination.tsx";
 import Button from "react-bootstrap/Button";
-
+import {useDesks} from "../../shared/hooks/useDesks";
 interface DeskType {
     id: string;
     title: string;
@@ -21,6 +21,7 @@ interface UserType {
 }
 
 export const MainPage = () => {
+    const addDesks=useDesks((state)=> state.bears);
     const [desks, setDesks] = useState<DeskType[]>([]);
     const [loading, setLoading] = useState(true);
     const [currentUser, setCurrentUser] = useState<UserType | null>(null);
@@ -54,7 +55,7 @@ export const MainPage = () => {
             try {
                 const response = await fetch('http://localhost:3000/desks');
                 if (!response.ok) {
-                    new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const desksData = await response.json();
 
