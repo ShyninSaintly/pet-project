@@ -6,6 +6,7 @@ import {DndContext, type DragEndEvent} from '@dnd-kit/core'
 import { Draggable } from '../../shared/ui/dragAndDrop/Draggable/Draggable.tsx'
 import { Droppable } from '../../shared/ui/dragAndDrop/Droppable.tsx'
 import { useParams } from 'react-router-dom'
+import {Loader} from "../../shared/components/Loader/Loader.tsx";
 
 interface Task {
     id: string
@@ -40,7 +41,7 @@ export const DeskPage = () => {
         }
 
         if (deskId) {
-            fetchTasks()
+            fetchTasks();
         }
     }, [deskId])
     const items: Record<ColumnId, Task[]> = {
@@ -78,28 +79,24 @@ export const DeskPage = () => {
                 )
             )
         } catch (err) {
-            console.error('Ошибка обновления задачи:', err)
+            console.error('Ошибка обновления задачи:', err);
         }
     }
 
-    if (loading) {
-        return (
-            <Container fluid>
-                <p>Загрузка...</p>
-            </Container>
-        )
-    }
-
     return (
-        <>
             <Container fluid>
+                {loading ? (
+                        <Container fluid>
+                            <Loader/>
+                        </Container>
+                ):(
                 <DndContext onDragEnd={handleDragEnd}>
                     <Table responsive="xl" className={classes.DeskPageTable}>
                         <thead>
                         <tr>
                             <th>Надо сделать</th>
                             <th>В работе</th>
-                            <th>Готов к тесту</th>
+                            <th>Готово к тесту</th>
                             <th>Готово</th>
                         </tr>
                         </thead>
@@ -137,7 +134,7 @@ export const DeskPage = () => {
                         </tbody>
                     </Table>
                 </DndContext>
+                )}
             </Container>
-        </>
     )
 }

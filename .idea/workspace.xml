@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Added pagination">
+    <list default="true" id="5212bbb6-7ae5-4740-8653-338032867774" name="Changes" comment="Fixed loading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/DeskPage/DeskPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/pages/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-uikit-app/src/shared/hooks/useBears.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-uikit-app/src/shared/hooks/useDesks.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +153,8 @@
       <workItem from="1759381832898" duration="23305000" />
       <workItem from="1759730512459" duration="21943000" />
       <workItem from="1759813369370" duration="18087000" />
-      <workItem from="1759839125051" duration="4315000" />
+      <workItem from="1759839125051" duration="5656000" />
+      <workItem from="1759900003224" duration="7233000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -467,7 +468,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759839138933</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="zustand initialization">
+      <option name="closed" value="true" />
+      <created>1759843913390</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1759843913390</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,6 +516,8 @@
     <MESSAGE value="added auth router not working" />
     <MESSAGE value="Private route??? valid??" />
     <MESSAGE value="Added pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added pagination" />
+    <MESSAGE value="zustand initialization" />
+    <MESSAGE value="Fixed loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed loading" />
   </component>
 </project>
