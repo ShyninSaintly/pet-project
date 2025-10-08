@@ -93,12 +93,12 @@ export const DeskPage = () => {
                 <DndContext onDragEnd={handleDragEnd}>
                     <Table responsive="xl" className={classes.DeskPageTable}>
                         <thead>
-                        <tr>
-                            <th>Надо сделать</th>
-                            <th>В работе</th>
-                            <th>Готово к тесту</th>
-                            <th>Готово</th>
-                        </tr>
+                            <tr>
+                                <th>Надо сделать</th>
+                                <th>В работе</th>
+                                <th>Готово к тесту</th>
+                                <th>Готово</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>

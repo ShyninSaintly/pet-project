@@ -22,7 +22,7 @@ interface UserType {
 }
 
 export const MainPage = () => {
-    const addDesks = useDesks((state)=> state.bears);
+    const addDesks = useDesks((setter)=> setter.bears);
     const [desks, setDesks] = useState<DeskType[]>([]);
     const [loading, setLoading] = useState(true);
     const [currentUser, setCurrentUser] = useState<UserType | null>(null);
@@ -104,7 +104,7 @@ export const MainPage = () => {
                         {page}/{totalPages}
                     </p>
                         <Button onClick={prevPage} className="page">
-                            &larr;
+                            Прошл.
                         </Button>
                     {[...Array(totalPages).keys()].map((el) => (
                         <Button
@@ -116,9 +116,9 @@ export const MainPage = () => {
                         </Button>
                     ))}
                     <Button onClick={nextPage} className="page">
-                        &rarr;
+                        След.
                     </Button>
-                </div>s
+                </div>
             </Container>
         </>
     );
