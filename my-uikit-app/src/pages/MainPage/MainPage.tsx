@@ -22,7 +22,7 @@ interface UserType {
 }
 
 export const MainPage = () => {
-    const addDesks = useDesks((setter)=> setter.bears);
+    const addDesks = useDesks((setter)=> setter.desks);
     const [desks, setDesks] = useState<DeskType[]>([]);
     const [loading, setLoading] = useState(true);
     const [currentUser, setCurrentUser] = useState<UserType | null>(null);

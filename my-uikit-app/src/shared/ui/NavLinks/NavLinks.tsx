@@ -15,15 +15,15 @@ export const NavLinks = () => {
 
     const checkAuthStatus = () => {
         const currentUser = sessionStorage.getItem('currentUser')
-        setIsLoggedIn(!!currentUser)
+        setIsLoggedIn(!!currentUser);
     }
 
     const handleLogout = (e: React.MouseEvent) => {
-        e.preventDefault()
-        sessionStorage.clear()
-        localStorage.clear()
-        setIsLoggedIn(false)
-        navigate('/login')
+        e.preventDefault();
+        sessionStorage.clear();
+        localStorage.clear();
+        setIsLoggedIn(false);
+        navigate('/login');
     }
 
     return (

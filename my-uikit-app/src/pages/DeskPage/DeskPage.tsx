@@ -89,7 +89,7 @@ export const DeskPage = () => {
                         <Container fluid>
                             <Loader/>
                         </Container>
-                ):(
+                ) : (
                 <DndContext onDragEnd={handleDragEnd}>
                     <Table responsive="xl" className={classes.DeskPageTable}>
                         <thead>

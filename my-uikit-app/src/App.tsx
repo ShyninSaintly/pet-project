@@ -15,17 +15,17 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/login" element={<LoginPage/>}/>
-                {currentUser && (
-                    <>
-                        <Route path="/" element={<MainPage/>}/>
-                        <Route path="/desk/:deskId" element={<DeskPage/>}/>
-                        <Route path="/user" element={<UserPage/>}/>
-                        <Route path='/createDesk' element={<CreateDesk/>}/>
-                        <Route path='/createTask' element={<CreateTask/>}/>
-                        <Route path='/edit' element={<Edit/>}/>
-                        <Route path='/edit/:deskId' element={<Edit/>}/>
-                    </>
-                )}
+                    {currentUser && (
+                        <>
+                            <Route path="/" element={<MainPage/>}/>
+                            <Route path="/desk/:deskId" element={<DeskPage/>}/>
+                            <Route path="/user" element={<UserPage/>}/>
+                            <Route path='/createDesk' element={<CreateDesk/>}/>
+                            <Route path='/createTask' element={<CreateTask/>}/>
+                            <Route path='/edit' element={<Edit/>}/>
+                            <Route path='/edit/:deskId' element={<Edit/>}/>
+                        </>
+                    )}
                 <Route path="*" element={<Navigate to="/login" replace />} />
             </Routes>
         </Router>
